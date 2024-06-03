@@ -1,3 +1,7 @@
+'use client';
+
+import { Link } from '@chakra-ui/next-js';
+
 export function Card({
   className,
   title,
@@ -10,9 +14,9 @@ export function Card({
   href: string;
 }): JSX.Element {
   return (
-    <a
+    <Link
+      href={href}
       className={className}
-      href={`${href}?utm_source=create-turbo&utm_medium=basic&utm_campaign=create-turbo"`}
       rel="noopener noreferrer"
       target="_blank"
     >
@@ -20,6 +24,6 @@ export function Card({
         {title} <span>-&gt;</span>
       </h2>
       <p>{children}</p>
-    </a>
+    </Link>
   );
 }
