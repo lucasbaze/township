@@ -5,19 +5,16 @@ export const ShadowImage = ({
   src,
   alt,
   width,
-  height,
 }: {
   src: string;
   alt: string;
   width: ResponsiveObject<string>;
-  height: ResponsiveObject<string>;
 }) => {
   return (
     <Box
       position="relative"
       display="inline-block"
       w={width}
-      h={height}
       padding={{ base: '5px', sm: '10px', md: '10px' }}
     >
       <Box

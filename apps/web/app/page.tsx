@@ -19,7 +19,6 @@ export default function Page(): JSX.Element {
             src="./images/austin-skyline-copy.jpeg"
             alt="Austin Skyline"
             width={{ base: '100px', sm: '200px', md: '300px' }}
-            // height={{ base: '100px', sm: '200px', md: '300px' }}
           />
         </GridItem>
         <GridItem colSpan={1} rowSpan={2}>
@@ -27,7 +26,6 @@ export default function Page(): JSX.Element {
             src="./images/texas-long-horn-copy.jpeg"
             alt="Texas Long Horn"
             width={{ base: '200px', sm: '274px', md: '480px' }}
-            // height={{ base: '200px', sm: '200px', md: '350px' }}
           />
         </GridItem>
         <GridItem colSpan={1}>
@@ -35,7 +33,6 @@ export default function Page(): JSX.Element {
             src="./images/whataburger.png"
             alt="Whataburger"
             width={{ base: '100px', sm: '200px', md: '300px' }}
-            // height={{ base: '100px', sm: '200px', md: '300px' }}
           />
         </GridItem>
       </Grid>
