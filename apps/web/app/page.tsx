@@ -1,12 +1,10 @@
 import { Box, Heading, Grid, GridItem } from '@chakra-ui/react';
 
-import NavBar from '../components/nav-bar';
 import { ShadowImage } from '../components/shadow-image';
 
 export default function Page(): JSX.Element {
   return (
     <main>
-      <NavBar />
       <Grid
         templateColumns="repeat(2, 1fr)"
         gap={4}

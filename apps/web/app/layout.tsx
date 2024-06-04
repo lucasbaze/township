@@ -1,7 +1,10 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Providers } from './providers';
-import { inria } from '../components/fonts';
+import { poppins } from '../components/fonts';
+
+import NavBar from '../components/nav-bar';
+import { Footer } from '../components/footer';
 
 export const metadata: Metadata = {
   title: 'Create Turborepo',
@@ -15,8 +18,12 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <body className={inria.className}>
-        <Providers>{children}</Providers>
+      <body className={poppins.className}>
+        <Providers>
+          <NavBar />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

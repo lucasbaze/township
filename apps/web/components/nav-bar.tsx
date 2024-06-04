@@ -9,19 +9,20 @@ import {
   Stack,
   Collapse,
   Icon,
-  Link,
   Popover,
   PopoverTrigger,
-  PopoverContent,
+  // PopoverContent,
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
 } from '@chakra-ui/react';
+import { Link } from '@chakra-ui/next-js';
+
 import {
   HamburgerIcon,
   CloseIcon,
   ChevronDownIcon,
-  ChevronRightIcon,
+  // ChevronRightIcon,
 } from '@chakra-ui/icons';
 import { inria } from './fonts';
 
@@ -85,16 +86,6 @@ export default function WithSubnavigation() {
             as={'a'}
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
-            fontWeight={400}
-            variant={'link'}
-            href={'#'}
-          >
-            Sign In
-          </Button>
-          <Button
-            as={'a'}
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize={'sm'}
             fontWeight={600}
             color={'white'}
             bg={'pink.400'}
@@ -103,7 +94,7 @@ export default function WithSubnavigation() {
               bg: 'pink.300',
             }}
           >
-            Sign Up
+            Contact Us
           </Button>
         </Stack>
       </Flex>
@@ -118,7 +109,7 @@ export default function WithSubnavigation() {
 const DesktopNav = () => {
   const linkColor = useColorModeValue('gray.600', 'gray.200');
   const linkHoverColor = useColorModeValue('gray.800', 'white');
-  const popoverContentBgColor = useColorModeValue('white', 'gray.800');
+  // const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
   return (
     <Stack direction={'row'} spacing={4}>
@@ -127,7 +118,7 @@ const DesktopNav = () => {
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
               <Link
-                p={2}
+                // p={2}
                 href={navItem.href ?? '#'}
                 fontSize={'sm'}
                 fontWeight={500}
@@ -141,7 +132,7 @@ const DesktopNav = () => {
               </Link>
             </PopoverTrigger>
 
-            {navItem.children && (
+            {/* {navItem.children && (
               <PopoverContent
                 border={0}
                 boxShadow={'xl'}
@@ -156,7 +147,7 @@ const DesktopNav = () => {
                   ))}
                 </Stack>
               </PopoverContent>
-            )}
+            )} */}
           </Popover>
         </Box>
       ))}
@@ -164,42 +155,42 @@ const DesktopNav = () => {
   );
 };
 
-const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
-  return (
-    <Link
-      href={href}
-      role={'group'}
-      display={'block'}
-      p={2}
-      rounded={'md'}
-      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}
-    >
-      <Stack direction={'row'} align={'center'}>
-        <Box>
-          <Text
-            transition={'all .3s ease'}
-            _groupHover={{ color: 'pink.400' }}
-            fontWeight={500}
-          >
-            {label}
-          </Text>
-          <Text fontSize={'sm'}>{subLabel}</Text>
-        </Box>
-        <Flex
-          transition={'all .3s ease'}
-          transform={'translateX(-10px)'}
-          opacity={0}
-          _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
-          justify={'flex-end'}
-          align={'center'}
-          flex={1}
-        >
-          <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
-        </Flex>
-      </Stack>
-    </Link>
-  );
-};
+// const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
+//   return (
+//     <Link
+//       href={href}
+//       role={'group'}
+//       display={'block'}
+//       p={2}
+//       rounded={'md'}
+//       _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}
+//     >
+//       <Stack direction={'row'} align={'center'}>
+//         <Box>
+//           <Text
+//             transition={'all .3s ease'}
+//             _groupHover={{ color: 'pink.400' }}
+//             fontWeight={500}
+//           >
+//             {label}
+//           </Text>
+//           <Text fontSize={'sm'}>{subLabel}</Text>
+//         </Box>
+//         <Flex
+//           transition={'all .3s ease'}
+//           transform={'translateX(-10px)'}
+//           opacity={0}
+//           _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
+//           justify={'flex-end'}
+//           align={'center'}
+//           flex={1}
+//         >
+//           <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
+//         </Flex>
+//       </Stack>
+//     </Link>
+//   );
+// };
 
 const MobileNav = () => {
   return (
@@ -270,48 +261,54 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
 
 interface NavItem {
   label: string;
+  href: string;
   subLabel?: string;
   children?: Array<NavItem>;
-  href?: string;
 }
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'Inspiration',
-    children: [
-      {
-        label: 'Explore Design Work',
-        subLabel: 'Trending Design to inspire you',
-        href: '#',
-      },
-      {
-        label: 'New & Noteworthy',
-        subLabel: 'Up-and-coming Designers',
-        href: '#',
-      },
-    ],
+    label: 'Home',
+    href: '/',
   },
   {
-    label: 'Find Work',
-    children: [
-      {
-        label: 'Job Board',
-        subLabel: 'Find your dream design job',
-        href: '#',
-      },
-      {
-        label: 'Freelance Projects',
-        subLabel: 'An exclusive list for contract work',
-        href: '#',
-      },
-    ],
+    label: 'For Owners',
+    href: '/for-owners',
+    // children: [
+    //   {
+    //     label: 'Explore Design Work',
+    //     subLabel: 'Trending Design to inspire you',
+    //     href: '#',
+    //   },
+    //   {
+    //     label: 'New & Noteworthy',
+    //     subLabel: 'Up-and-coming Designers',
+    //     href: '#',
+    //   },
+    // ],
   },
   {
-    label: 'Learn Design',
-    href: '#',
+    label: 'About Us',
+    href: '/about-us',
+    // children: [
+    //   {
+    //     label: 'Job Board',
+    //     subLabel: 'Find your dream design job',
+    //     href: '#',
+    //   },
+    //   {
+    //     label: 'Freelance Projects',
+    //     subLabel: 'An exclusive list for contract work',
+    //     href: '#',
+    //   },
+    // ],
   },
   {
-    label: 'Hire Designers',
-    href: '#',
+    label: 'Criteria',
+    href: '/criteria',
   },
+  // {
+  //   label: 'Resources',
+  //   href: '/resources',
+  // },
 ];
