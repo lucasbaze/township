@@ -19,8 +19,16 @@ const theme = extendTheme({
   components: {
     Button: {
       baseStyle: {
-        fontWeight: '400',
+        padding: '2px 4px',
+        fontWeight: '600',
         borderRadius: '99px',
+      },
+      variants: {
+        primary: {},
+        outline: {
+          color: 'white',
+          minWidth: 'unset',
+        },
       },
     },
     Input: {
@@ -28,6 +36,7 @@ const theme = extendTheme({
         field: {
           borderRadius: '99px',
           color: 'black',
+          fontSize: '14px',
         },
       },
       variants: {
@@ -44,6 +53,7 @@ const theme = extendTheme({
       baseStyle: {
         fontWeight: '400',
         fontFamily: inria.className,
+        letterSpacing: '-1px',
       },
     },
   },

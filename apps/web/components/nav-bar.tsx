@@ -43,9 +43,9 @@ export default function WithSubnavigation() {
         align={'center'}
       >
         <Flex
-          flex={{ base: 1, md: 'auto' }}
+          flex={{ base: 1, lg: 'auto' }}
           ml={{ base: -2 }}
-          display={{ base: 'flex', md: 'none' }}
+          display={{ base: 'flex', lg: 'none' }}
         >
           <IconButton
             onClick={onToggle}
@@ -56,9 +56,9 @@ export default function WithSubnavigation() {
             aria-label={'Toggle Navigation'}
           />
         </Flex>
-        <Flex flex={{ base: 2 }} justify={{ base: 'center', md: 'start' }}>
+        <Flex flex={{ base: 2 }} justify={{ base: 'center', lg: 'start' }}>
           <Text
-            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
+            textAlign={useBreakpointValue({ base: 'center', lg: 'left' })}
             fontFamily={inria.className}
             fontWeight={700}
             fontSize={'20px'}
@@ -68,8 +68,8 @@ export default function WithSubnavigation() {
           </Text>
 
           <Flex
-            display={{ base: 'none', md: 'flex' }}
-            marginLeft={{ md: 'auto' }}
+            display={{ base: 'none', lg: 'flex' }}
+            marginLeft={{ lg: 'auto' }}
             ml={10}
           >
             <DesktopNav />
@@ -77,14 +77,14 @@ export default function WithSubnavigation() {
         </Flex>
 
         <Stack
-          flex={{ base: 1, md: 0 }}
+          flex={{ base: 1, lg: 0 }}
           justify={'flex-end'}
           direction={'row'}
           spacing={6}
         >
           <Button
             as={'a'}
-            display={{ base: 'none', md: 'inline-flex' }}
+            display={{ base: 'none', lg: 'inline-flex' }}
             fontSize={'sm'}
             fontWeight={600}
             color={'white'}
@@ -162,7 +162,7 @@ const DesktopNav = () => {
 //       role={'group'}
 //       display={'block'}
 //       p={2}
-//       rounded={'md'}
+//       rounded={'lg'}
 //       _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}
 //     >
 //       <Stack direction={'row'} align={'center'}>
@@ -197,7 +197,7 @@ const MobileNav = () => {
     <Stack
       bg={useColorModeValue('white', 'gray.800')}
       p={4}
-      display={{ md: 'none' }}
+      display={{ lg: 'none' }}
     >
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
