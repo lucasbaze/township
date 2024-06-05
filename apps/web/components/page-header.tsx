@@ -84,7 +84,7 @@ export const PageHeader = ({
       <Heading as="h1" size={{ base: 'xl', lg: '2xl' }} pb={{ base: 2, lg: 4 }}>
         {title}
       </Heading>
-      <Text fontSize={{ base: 'sm', lg: 'lg' }} mb={6} color="gray.500">
+      <Text fontSize={{ base: 'md', lg: 'lg' }} mb={6}>
         {subtitle}
       </Text>
       <Button variant="primary" size="lg">
