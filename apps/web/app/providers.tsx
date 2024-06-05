@@ -22,9 +22,12 @@ const theme = extendTheme({
         padding: '2px 4px',
         fontWeight: '600',
         borderRadius: '99px',
+        color: 'white',
       },
       variants: {
-        primary: {},
+        primary: {
+          backgroundColor: 'brand.primary',
+        },
         outline: {
           color: 'white',
           minWidth: 'unset',
