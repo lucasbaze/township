@@ -19,10 +19,18 @@ const theme = extendTheme({
   components: {
     Button: {
       baseStyle: {
-        padding: '2px 4px',
+        padding: '2px 8px',
         fontWeight: '600',
         borderRadius: '99px',
         color: 'white',
+      },
+      sizes: {
+        md: {
+          px: '8',
+        },
+        lg: {
+          px: '12',
+        },
       },
       variants: {
         primary: {

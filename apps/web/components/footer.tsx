@@ -11,14 +11,12 @@ import {
   Text,
   VisuallyHidden,
   Input,
-  IconButton,
   useColorModeValue,
   Heading,
   Divider,
 } from '@chakra-ui/react';
 import { Link } from '@chakra-ui/next-js';
 import { ReactNode } from 'react';
-import { BiMailSend } from 'react-icons/bi';
 import {
   FaLinkedinIn,
   FaSpotify,
