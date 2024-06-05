@@ -19,7 +19,7 @@ export const SectionTitle = ({
     </Box>
     <Flex alignItems="baseline" margin="0 auto" gap={4}>
       <Box width="25px" height="1px" bg="brand.primary" />
-      <Heading>{title}</Heading>
+      <Heading fontSize={{ base: '2xl', md: '4xl' }}>{title}</Heading>
       <Box width="25px" height="1px" bg="brand.primary" />
     </Flex>
     {subtitle && <Text>{subtitle}</Text>}
