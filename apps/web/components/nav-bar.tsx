@@ -9,9 +9,7 @@ import {
   IconButton,
   Button,
   Stack,
-  Collapse,
   chakra,
-  Icon,
   useColorModeValue,
   useDisclosure,
   VisuallyHidden,
@@ -19,7 +17,6 @@ import {
   Drawer,
   DrawerBody,
   DrawerFooter,
-  DrawerHeader,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
@@ -79,7 +76,7 @@ export default function WithSubnavigation() {
       <Container maxW={'6xl'}>
         <Flex
           bg={useColorModeValue('white', 'gray.800')}
-          minH={'65px'}
+          minH={'75px'}
           color={useColorModeValue('gray.500', 'white')}
           py={{ base: 2 }}
           px={{ base: 4 }}
@@ -104,12 +101,16 @@ export default function WithSubnavigation() {
               aria-label={'Toggle Navigation'}
             />
           </Flex>
-          <Flex flex={{ lg: 2 }} justify={{ base: 'center', lg: 'start' }}>
+          <Flex
+            flex={{ lg: 2 }}
+            justify={{ base: 'center', lg: 'start' }}
+            alignItems="center"
+          >
             <Text
               textAlign={{ base: 'center', lg: 'left' }}
               fontFamily={inria.className}
-              fontWeight={700}
-              fontSize={'20px'}
+              fontWeight={600}
+              fontSize={{ base: '20px', md: '24px' }}
               color={useColorModeValue('gray.700', 'white')}
             >
               Township Ventures
@@ -190,7 +191,7 @@ export default function WithSubnavigation() {
 
 const DesktopNav = () => {
   const pathname = usePathname();
-  const linkColor = useColorModeValue('gray.600', 'gray.200');
+  const linkColor = useColorModeValue('gray.700', 'gray.200');
 
   return (
     <Stack direction={'row'} spacing={4} mr={4}>

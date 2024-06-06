@@ -1,5 +1,9 @@
+'use client';
+
 import { ResponsiveObject } from '@chakra-ui/styled-system';
-import { Flex, Box, Image, Heading, Text } from '@chakra-ui/react';
+import { Flex, Box, Button, Image, Heading, Text } from '@chakra-ui/react';
+
+import { Link } from '@chakra-ui/next-js';
 
 import { ShadowImage } from '../shadow-image';
 
@@ -11,6 +15,8 @@ export const ImageBlock = ({
   iconWidth,
   title,
   description,
+  buttonText,
+  buttonHref,
 }: {
   src: string;
   alt: string;
@@ -19,12 +25,14 @@ export const ImageBlock = ({
   iconWidth: ResponsiveObject<string>;
   title: string;
   description: string;
+  buttonText?: string;
+  buttonHref?: string;
 }) => (
   <Flex
     direction={{ base: 'column', md: 'row' }}
     alignItems={{ md: 'center' }}
-    gap={{ base: 4, md: 6 }}
-    maxWidth={{ base: '400px', md: '750px' }}
+    gap={{ base: 4, md: 20 }}
+    maxWidth={{ base: '400px', md: '850px' }}
     margin={{ base: '0 auto' }}
   >
     <Box pb={2} maxWidth={{ md: '300px', lg: '350px' }}>
@@ -41,6 +49,15 @@ export const ImageBlock = ({
         <Heading fontSize={{ base: '2xl', md: '3xl' }}>{title}</Heading>
       </Flex>
       <Text fontSize={{ base: 'sm', md: 'md' }}>{description}</Text>
+      {buttonHref && (
+        <Box paddingTop={4}>
+          <Link href={buttonHref}>
+            <Button variant="primary" size={{ base: 'sm', md: 'md' }}>
+              {buttonText}
+            </Button>
+          </Link>
+        </Box>
+      )}
     </Box>
   </Flex>
 );

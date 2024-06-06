@@ -1,6 +1,9 @@
-import { Box, Heading, Grid, GridItem } from '@chakra-ui/react';
+import { Stack, Box, Heading, Grid, GridItem } from '@chakra-ui/react';
 
 import { ShadowImage } from '../components/shadow-image';
+import { BackgroundSection } from '../components/background-section';
+import { SectionTitle } from '../components/section-title';
+import { ImageBlock } from '../components/description-blocks/image-block';
 
 export default function Page(): JSX.Element {
   return (
@@ -39,6 +42,48 @@ export default function Page(): JSX.Element {
           We Buy Texas Businesses and Build Them to Last Forever
         </Heading>
       </Box>
+      <BackgroundSection
+        title="Long Term Partners"
+        subtitle="Township Ventures is a long-term holding company dedicated to partnering with owners to grow their business for a very long time."
+      />
+      <Box paddingTop={24} paddingBottom={10}>
+        <SectionTitle title="Learn More" />
+      </Box>
+      <Stack gap={12}>
+        <ImageBlock
+          src="./images/big-tex.png"
+          alt="Big Tex"
+          imageWidth={{ base: '100%' }}
+          iconSrc="./images/cowboy-star.png"
+          iconWidth={{ base: '45px', md: '55px' }}
+          title="For Owners"
+          description="We strive to make the buying process simple and fair to best setup your business."
+          buttonText="Our Process"
+          buttonHref="/for-owners"
+        />
+        <ImageBlock
+          src="./images/am-campus-aerial.png"
+          alt="A&M Campus"
+          imageWidth={{ base: '100%' }}
+          iconSrc="./images/physical-icon.png"
+          iconWidth={{ base: '45px', md: '55px' }}
+          title="Meet the Team"
+          description="We work with business owners to build long-term value for our businesses, communities and families."
+          buttonText="Our Team"
+          buttonHref="/about-us"
+        />
+        <ImageBlock
+          src="./images/riverwalk.jpeg"
+          alt="San antonio riverwalk"
+          imageWidth={{ base: '100%' }}
+          iconSrc="./images/city-development.png"
+          iconWidth={{ base: '45px', md: '55px' }}
+          title="What we look for"
+          description="We look for business owners who want to start planning for the next generation of their business. "
+          buttonText="Our Criteria"
+          buttonHref="/criteria"
+        />
+      </Stack>
     </main>
   );
 }
