@@ -5,6 +5,8 @@ import { BackgroundSection } from '../components/background-section';
 import { SectionTitle } from '../components/section-title';
 import { ImageBlock } from '../components/description-blocks/image-block';
 
+import { NextShadowImage } from '../components/next-shadow-image';
+
 export default function Page(): JSX.Element {
   return (
     <main>
@@ -16,22 +18,22 @@ export default function Page(): JSX.Element {
         alignItems={'end'}
       >
         <GridItem colSpan={1}>
-          <ShadowImage
-            src="./images/austin-skyline-copy.jpeg"
+          <NextShadowImage
+            src="/images/austin-skyline-copy.jpeg"
             alt="Austin Skyline"
             width={{ base: '100px', sm: '200px', md: '300px' }}
           />
         </GridItem>
         <GridItem colSpan={1} rowSpan={2}>
-          <ShadowImage
-            src="./images/texas-long-horn-copy.jpeg"
+          <NextShadowImage
+            src="/images/texas-long-horn-copy.jpeg"
             alt="Texas Long Horn"
             width={{ base: '200px', sm: '274px', md: '480px' }}
           />
         </GridItem>
         <GridItem colSpan={1}>
-          <ShadowImage
-            src="./images/whataburger.png"
+          <NextShadowImage
+            src="/images/whataburger.png"
             alt="Whataburger"
             width={{ base: '100px', sm: '200px', md: '300px' }}
           />
