@@ -18,7 +18,7 @@ export const BackgroundSection = ({
         <Image width="350px" src="./images/texas-map-small.png" />
       </Box>
       <Flex alignItems="center" justifyContent="center" margin="0 auto" gap={4}>
-        <Heading fontSize={{ base: '2xl', md: '4xl' }} pb={4}>
+        <Heading fontSize={{ base: '2xl', md: '4xl' }} pb={4} color="black">
           {title}
         </Heading>
       </Flex>

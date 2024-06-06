@@ -1,6 +1,5 @@
-import { Stack, Box, Heading, Grid, GridItem } from '@chakra-ui/react';
+import { Stack, Box, Heading, Button, Grid, GridItem } from '@chakra-ui/react';
 
-import { ShadowImage } from '../components/shadow-image';
 import { BackgroundSection } from '../components/background-section';
 import { SectionTitle } from '../components/section-title';
 import { ImageBlock } from '../components/description-blocks/image-block';
@@ -39,10 +38,20 @@ export default function Page(): JSX.Element {
           />
         </GridItem>
       </Grid>
-      <Box margin="auto" width="370px" textAlign="center">
-        <Heading fontWeight={'300'}>
+      <Box margin="auto" width="370px" textAlign="center" py={16}>
+        <Heading
+          as="h1"
+          fontWeight={500}
+          paddingBottom={8}
+          paddingX={8}
+          lineHeight={1.1}
+          fontSize={{ base: '32px', md: '48px' }}
+        >
           We Buy Texas Businesses and Build Them to Last Forever
         </Heading>
+        <Button variant="primary" size="md" paddingY="6">
+          Download Brochure
+        </Button>
       </Box>
       <BackgroundSection
         title="Long Term Partners"
