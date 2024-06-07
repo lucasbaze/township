@@ -47,6 +47,12 @@ export default function Page(): JSX.Element {
           <IconBlock
             iconSrc="./images/texas-flag.svg"
             iconWidth={{ base: '45px', md: '65px' }}
+            title="Minimum $1M in EBITDA"
+            description="Capacity for change and protection from uncertainty."
+          />
+          <IconBlock
+            iconSrc="./images/texas-flag.svg"
+            iconWidth={{ base: '45px', md: '65px' }}
             title="Strong Operating Margins"
             description="Capturing the value created for future reinvestment."
           />
@@ -65,15 +71,6 @@ export default function Page(): JSX.Element {
         </Box>
         <Stack gap={{ base: 20, md: 16 }}>
           <ImageBlock
-            src="./images/running.png"
-            alt="Man Running"
-            imageWidth={{ base: '100%' }}
-            iconSrc="./images/physical-icon.png"
-            iconWidth={{ base: '45px', md: '55px' }}
-            title="Physical Health & Wellness"
-            description="Businesses that focus on the long term physical health and wellbeing of people."
-          />
-          <ImageBlock
             src="./images/construction.png"
             alt="Construction Site"
             imageWidth={{ base: '100%' }}
@@ -83,13 +80,22 @@ export default function Page(): JSX.Element {
             description="Businesses that architect, build, and maintain the land and infrastructure for our cities."
           />
           <ImageBlock
-            src="./images/college-education.png"
-            alt="College Hats being thrown"
+            src="./images/baylor-statue.jpeg"
+            alt="Baylor Statue of Rufus Burleson"
             imageWidth={{ base: '100%' }}
             iconSrc="./images/child-education.png"
             iconWidth={{ base: '45px', md: '55px' }}
             title="Education"
             description="Businesses that create opportunities to learn new skills, grow, and ultimately thrive."
+          />
+          <ImageBlock
+            src="./images/running.png"
+            alt="Man Running"
+            imageWidth={{ base: '100%' }}
+            iconSrc="./images/physical-icon.png"
+            iconWidth={{ base: '45px', md: '55px' }}
+            title="Physical Health & Wellness"
+            description="Businesses that focus on the long term physical health and wellbeing of people."
           />
         </Stack>
       </Container>

@@ -27,27 +27,27 @@ const HeroImageCollageGrid = () => (
   >
     <GridItem rowSpan={1} colSpan={1}>
       <NextShadowImage
-        src="/images/alamo-full-short.jpeg"
+        src="/images/texas-long-horn-copy.jpeg"
         alt="Alamo"
-        width={{ base: '100px', md: '125px', lg: '200px' }}
+        width={{ base: '120px', md: '125px', lg: '200px' }}
       />
     </GridItem>
     <GridItem
       rowSpan={2}
       colSpan={2}
-      transform={{ base: 'translateY(30%)', lg: 'translateY(50%)' }}
+      transform={{ base: 'translateY(20%)', lg: 'translateY(30%)' }}
     >
       <NextShadowImage
-        src="/images/long-horn-full.png"
+        src="/images/bitcoin-mining-riot-large.jpeg"
         alt="Texas Long Horn"
-        width={{ base: '200px', md: '250px', lg: '400px' }}
+        width={{ base: '240px', md: '250px', lg: '400px' }}
       />
     </GridItem>
     <GridItem rowSpan={2} colSpan={1}>
       <NextShadowImage
-        src="/images/austin-skyline-copy.jpeg"
-        alt="Austin Skyline"
-        width={{ base: '100px', md: '125px', lg: '200px' }}
+        src="/images/texas-bridge.png"
+        alt="Texas bridge"
+        width={{ base: '120px', md: '125px', lg: '200px' }}
       />
     </GridItem>
   </Grid>
@@ -63,13 +63,14 @@ export default function Page(): JSX.Element {
             paddingY={{ md: 16 }}
             paddingX={{ md: 4 }}
             paddingBottom={{ lg: 40 }}
+            marginY={{ md: 12, lg: 0 }}
           >
             <Box
               position="relative"
               margin="auto"
               textAlign={{ base: 'center', md: 'left' }}
               pb={{ base: 16 }}
-              pt={{ base: 16, md: 20 }}
+              pt={{ base: 16, md: 8, lg: 20 }}
               maxWidth={{ base: '350px', md: '450px', lg: 'unset' }}
               flex={1}
             >

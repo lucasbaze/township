@@ -26,7 +26,7 @@ export const GoodwillBlock = () => (
         gap={4}
       >
         <GridItem rowSpan={1} colSpan={1}>
-          <Image borderRadius="md" width="100%" src="./images/big-tex.png" />
+          <Image borderRadius="md" width="100%" src="./images/riverwalk.jpeg" />
         </GridItem>
         <GridItem rowSpan={2} colSpan={1}>
           <Image

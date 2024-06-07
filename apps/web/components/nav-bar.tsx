@@ -132,7 +132,7 @@ export default function WithSubnavigation() {
             direction={'row'}
             spacing={6}
           >
-            <Link href="/contact-us">
+            <Link href="/contact-us" onClick={onClose}>
               <Button
                 display={{ base: 'none', lg: 'inline-flex' }}
                 fontSize={'sm'}
@@ -225,17 +225,19 @@ const MobileNav = ({ onClose }: { onClose: () => void }) => {
           <MobileNavItem key={navItem.label} {...navItem} />
         </Box>
       ))}
-      <Button
-        display="block"
-        margin="24px auto"
-        fontSize={'sm'}
-        size="md"
-        borderColor="brand.primary"
-        variant="outline"
-        color="brand.primary"
-      >
-        Contact Us
-      </Button>
+      <Link href="contact-us" onClick={onClose}>
+        <Button
+          display="block"
+          margin="24px auto"
+          fontSize={'sm'}
+          size="md"
+          borderColor="brand.primary"
+          variant="outline"
+          color="brand.primary"
+        >
+          Contact Us
+        </Button>
+      </Link>
     </Box>
   );
 };

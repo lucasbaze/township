@@ -16,8 +16,8 @@ export default function Page(): JSX.Element {
         px={8}
       >
         <PageHeader
-          image1="./images/riverwalk.jpeg"
-          image1Alt="San Antonio Riverwalk"
+          image1="./images/austin-skyline-copy.jpeg"
+          image1Alt="Austin Skyline"
           image2="./images/texas-sign.png"
           image2Alt="Texas Sign"
           label="About Us"
@@ -38,14 +38,14 @@ export default function Page(): JSX.Element {
           >
             <Stack flex={1} gap={12}>
               <ShadowImage
-                src="./images/baylor-statue.jpeg"
-                alt="Baylor Statue of Rufus Burleson"
+                src="./images/solar-ranching.png"
+                alt="solar ranching"
                 width={{ base: '300px', md: '350px' }}
               />
               <Box display={{ base: 'none', lg: 'block' }}>
                 <ShadowImage
-                  src="./images/fiesta-san-antonio.jpeg"
-                  alt="Baylor Statue of Rufus Burleson"
+                  src="./images/texas-am-sully.jpeg"
+                  alt="A&M statue of Lawrence Sullivan"
                   width={{ base: '300px', md: '350px' }}
                 />
               </Box>
