@@ -63,7 +63,7 @@ export default function Page(): JSX.Element {
             paddingY={{ md: 16 }}
             paddingX={{ md: 4 }}
             paddingBottom={{ lg: 40 }}
-            marginY={{ md: 12, lg: 0 }}
+            marginY={{ md: 12, lg: 16 }}
           >
             <Box
               position="relative"
