@@ -28,25 +28,25 @@ const HeroImageCollageGrid = () => (
       <NextShadowImage
         src="/images/alamo-full-short.jpeg"
         alt="Alamo"
-        width={{ base: '100px', md: '200px' }}
+        width={{ base: '100px', md: '125px', lg: '200px' }}
       />
     </GridItem>
     <GridItem
       rowSpan={2}
       colSpan={2}
-      transform={{ base: 'translateY(30%)', md: 'translateY(50%)' }}
+      transform={{ base: 'translateY(30%)', lg: 'translateY(50%)' }}
     >
       <NextShadowImage
         src="/images/long-horn-full.png"
         alt="Texas Long Horn"
-        width={{ base: '200px', md: '400px' }}
+        width={{ base: '200px', md: '250px', lg: '400px' }}
       />
     </GridItem>
     <GridItem rowSpan={2} colSpan={1}>
       <NextShadowImage
         src="/images/austin-skyline-copy.jpeg"
         alt="Austin Skyline"
-        width={{ base: '100px', md: '200px' }}
+        width={{ base: '100px', md: '125px', lg: '200px' }}
       />
     </GridItem>
   </Grid>
@@ -55,18 +55,21 @@ const HeroImageCollageGrid = () => (
 export default function Page(): JSX.Element {
   return (
     <main>
-      <Box pt={{ base: 6, lg: 16 }} pb={{ base: 24, lg: 32 }}>
+      <Box pt={{ base: 6 }} pb={{ base: 24, lg: 32 }}>
         <Container maxW={'6xl'}>
           <Flex
             direction={{ base: 'column-reverse', md: 'row' }}
-            paddingBottom={{ md: 32 }}
+            paddingY={{ md: 16 }}
+            paddingX={{ md: 4 }}
+            paddingBottom={{ lg: 40 }}
           >
             <Box
               position="relative"
               margin="auto"
               textAlign={{ base: 'center', md: 'left' }}
-              py={{ base: 16, md: 24 }}
-              maxWidth={{ base: '350px' }}
+              pb={{ base: 16 }}
+              pt={{ base: 16, md: 20 }}
+              maxWidth={{ base: '350px', md: '450px', lg: 'unset' }}
               flex={1}
             >
               <Heading
@@ -74,7 +77,7 @@ export default function Page(): JSX.Element {
                 fontWeight={500}
                 paddingBottom={8}
                 lineHeight={1.1}
-                fontSize={{ base: '36px', md: '48px', lg: '54px' }}
+                fontSize={{ base: '36px', md: '42px', lg: '54px' }}
               >
                 We Buy <span className="highlight">Texas</span> Businesses and
                 Build Them to Last{' '}
@@ -94,7 +97,7 @@ export default function Page(): JSX.Element {
         <Box paddingTop={24} paddingBottom={10}>
           <SectionTitle title="Learn More" />
         </Box>
-        <Stack gap={12}>
+        <Stack gap={12} px={12}>
           <ImageBlock
             src="./images/big-tex.png"
             alt="Big Tex"

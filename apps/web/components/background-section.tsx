@@ -8,7 +8,12 @@ export const BackgroundSection = ({
   subtitle?: string;
 }) => (
   <Stack position="relative" spacing={5} textAlign="center" bg="#FAFBFB">
-    <Box maxWidth="450px" margin="0 auto" textAlign="center" paddingY={32}>
+    <Box
+      maxWidth="450px"
+      margin="0 auto"
+      textAlign="center"
+      paddingY={{ base: 24, md: 32 }}
+    >
       <Box
         position="absolute"
         top="50%"
@@ -22,7 +27,11 @@ export const BackgroundSection = ({
           {title}
         </Heading>
       </Flex>
-      {subtitle && <Text fontSize={{ md: 'lg' }}>{subtitle}</Text>}
+      {subtitle && (
+        <Text fontSize={{ base: 'sm', md: 'lg' }} px={10}>
+          {subtitle}
+        </Text>
+      )}
     </Box>
   </Stack>
 );
