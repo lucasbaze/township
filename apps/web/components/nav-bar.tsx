@@ -131,16 +131,18 @@ export default function WithSubnavigation() {
             direction={'row'}
             spacing={6}
           >
-            <Button
-              display={{ base: 'none', lg: 'inline-flex' }}
-              fontSize={'sm'}
-              size="sm"
-              borderColor="brand.primary"
-              variant="outline"
-              color="brand.primary"
-            >
-              Contact Us
-            </Button>
+            <Link href="/contact-us">
+              <Button
+                display={{ base: 'none', lg: 'inline-flex' }}
+                fontSize={'sm'}
+                size="sm"
+                borderColor="brand.primary"
+                variant="outline"
+                color="brand.primary"
+              >
+                Contact Us
+              </Button>
+            </Link>
           </Stack>
         </Flex>
       </Container>
@@ -194,7 +196,7 @@ const DesktopNav = () => {
   const linkColor = useColorModeValue('gray.700', 'gray.200');
 
   return (
-    <Stack direction={'row'} spacing={4} mr={4}>
+    <Stack direction={'row'} spacing={6} mr={4}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Link

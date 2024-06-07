@@ -8,7 +8,12 @@ import { IconBlock } from '../../components/description-blocks/icon-block';
 export default function Page(): JSX.Element {
   return (
     <main>
-      <Container maxW={'6xl'} py={{ base: 12, lg: 16 }} px={8}>
+      <Container
+        maxW={'6xl'}
+        pt={{ base: 12, lg: 16 }}
+        pb={{ base: 24, lg: 32 }}
+        px={8}
+      >
         <PageHeader
           image1="./images/riverwalk.jpeg"
           image1Alt="San Antonio Riverwalk"

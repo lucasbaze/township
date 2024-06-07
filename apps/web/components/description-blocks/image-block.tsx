@@ -50,11 +50,19 @@ export const ImageBlock = ({
       </Flex>
       <Text fontSize={{ base: 'sm', md: 'md' }}>{description}</Text>
       {buttonHref && (
-        <Box paddingTop={4}>
-          <Link href={buttonHref}>
-            <Button variant="primary" size={{ base: 'sm', md: 'md' }}>
-              {buttonText}
-            </Button>
+        <Box paddingTop={6}>
+          <Link
+            href={buttonHref}
+            fontWeight={500}
+            fontSize="18px"
+            color="brand.primary"
+            textDecoration="underline"
+            textDecorationColor="brand.primary"
+            textUnderlineOffset="4px"
+          >
+            {/* <Button variant="primary" size={{ base: 'sm', md: 'md' }}> */}
+            {buttonText}
+            {/* </Button> */}
           </Link>
         </Box>
       )}

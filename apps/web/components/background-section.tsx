@@ -22,7 +22,7 @@ export const BackgroundSection = ({
           {title}
         </Heading>
       </Flex>
-      {subtitle && <Text>{subtitle}</Text>}
+      {subtitle && <Text fontSize={{ md: 'lg' }}>{subtitle}</Text>}
     </Box>
   </Stack>
 );

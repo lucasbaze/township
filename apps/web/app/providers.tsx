@@ -9,7 +9,7 @@ import { inria, poppins } from '../components/fonts';
 const theme = extendTheme({
   colors: {
     brand: {
-      primary: '#800000',
+      primary: '#550000',
     },
   },
   fonts: {
@@ -40,6 +40,18 @@ const theme = extendTheme({
           color: 'white',
           minWidth: 'unset',
         },
+      },
+    },
+    Select: {
+      baseStyle: {
+        field: {
+          borderRadius: '99px',
+        },
+      },
+    },
+    Textarea: {
+      baseStyle: {
+        borderRadius: '12px',
       },
     },
     Input: {

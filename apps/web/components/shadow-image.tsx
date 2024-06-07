@@ -29,7 +29,7 @@ export const ShadowImage = ({
         bgImage={`url(${src})`}
         bgSize="contain"
         bgRepeat="no-repeat"
-        filter="blur(20px)"
+        filter="blur(20px) sepia(0.5);"
         zIndex={-1}
         borderRadius="md"
       />
@@ -46,7 +46,13 @@ export const ShadowImage = ({
           borderRadius="md"
         />
       )}
-      <Img src={src} alt={alt} borderRadius="md" zIndex={1} />
+      <Img
+        src={src}
+        alt={alt}
+        borderRadius="md"
+        zIndex={1}
+        filter="sepia(0.5)"
+      />
     </Box>
   );
 };
