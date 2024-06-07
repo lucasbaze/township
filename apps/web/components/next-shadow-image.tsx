@@ -59,7 +59,7 @@ export const NextShadowImage = ({
         height="500"
         src={src}
         alt={alt}
-        style={{ borderRadius: '2px', filter: 'sepia(0.1)' }}
+        style={{ borderRadius: '2px', filter: 'sepia(0.2)' }}
       />
     </Box>
   );

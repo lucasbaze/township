@@ -15,13 +15,13 @@ export default function Page(): JSX.Element {
         px={8}
       >
         <PageHeader
-          image1="./images/riverwalk.jpeg"
-          image1Alt="San Antonio Riverwalk"
-          image2="./images/texas-sign.png"
-          image2Alt="Texas Sign"
+          image1="./images/solar-farm-helios.jpeg"
+          image1Alt="Solar Farm Helios"
+          image2="./images/pecos-river-bridge.jpeg"
+          image2Alt="Pecos River Bridge"
           label="Criteria"
           title="What we look for"
-          subtitle="We look for businesses that directly contribute to building healthy, wealthy, and wise Texans."
+          subtitle="We look for low risk, Texas businesses with strong margins building healthy, wealthy, and wise Texans."
         />
         <Box paddingTop={24} paddingBottom={{ base: 10, md: 24 }}>
           <SectionTitle title="Business Criteria" />

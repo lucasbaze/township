@@ -1,7 +1,7 @@
 'use client';
 
 import { ResponsiveObject } from '@chakra-ui/styled-system';
-import { Flex, Box, Button, Image, Heading, Text } from '@chakra-ui/react';
+import { Flex, Box, Image, Heading, Text } from '@chakra-ui/react';
 
 import { Link } from '@chakra-ui/next-js';
 
@@ -60,9 +60,7 @@ export const ImageBlock = ({
             textDecorationColor="brand.primary"
             textUnderlineOffset="4px"
           >
-            {/* <Button variant="primary" size={{ base: 'sm', md: 'md' }}> */}
             {buttonText}
-            {/* </Button> */}
           </Link>
         </Box>
       )}

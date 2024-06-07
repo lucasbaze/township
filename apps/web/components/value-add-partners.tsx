@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Image, Heading, Flex, Text, Button } from '@chakra-ui/react';
+import { Box, Image, Heading, Flex, Text } from '@chakra-ui/react';
 
 import { Link } from '@chakra-ui/next-js';
 
@@ -23,13 +23,18 @@ export const ValueAddPartners = () => (
             and help it last generations.
           </Text>
         </Text>
-        <Button
-          variant="primary"
+        <Link
+          href="/about-us"
+          fontWeight={500}
+          fontSize="18px"
+          color="brand.primary"
+          textDecoration="underline"
+          textDecorationColor="brand.primary"
+          textUnderlineOffset="4px"
           display={{ base: 'none', md: 'block' }}
-          size="lg"
         >
-          <Link href="/about-us">Our Methodology</Link>
-        </Button>
+          Our Team
+        </Link>
       </Box>
       <Box flex={1}>
         <Image
@@ -38,12 +43,17 @@ export const ValueAddPartners = () => (
         />
       </Box>
     </Flex>
-    <Button
-      variant="primary"
-      margin="0 auto"
+    <Link
+      href="/about-us"
+      fontWeight={500}
+      fontSize="18px"
+      color="brand.primary"
+      textDecoration="underline"
+      textDecorationColor="brand.primary"
+      textUnderlineOffset="4px"
       display={{ base: 'block', md: 'none' }}
     >
-      <Link href="/about-us">Our Methodology</Link>
-    </Button>
+      Our Team
+    </Link>
   </Box>
 );

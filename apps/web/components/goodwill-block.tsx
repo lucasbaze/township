@@ -16,7 +16,6 @@ import { Link } from '@chakra-ui/next-js';
 export const GoodwillBlock = () => (
   <Flex
     direction={{ base: 'column', md: 'row' }}
-    alignItems="center"
     py={4}
     gap={{ base: 6, md: 12 }}
   >
@@ -59,9 +58,6 @@ export const GoodwillBlock = () => (
         We truly want what’s best for everyone and will ensure we treat everyone
         fairly, with kindness, and a genuine spirit of goodwill.
       </Text>
-      <Button variant="primary" display="block" size={{ base: 'md', lg: 'lg' }}>
-        <Link href="/about-us">Our Team</Link>
-      </Button>
     </Box>
   </Flex>
 );

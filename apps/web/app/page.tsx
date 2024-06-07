@@ -7,6 +7,7 @@ import {
   Grid,
   Flex,
   GridItem,
+  Link,
 } from '@chakra-ui/react';
 
 import { BackgroundSection } from '../components/background-section';
@@ -83,9 +84,11 @@ export default function Page(): JSX.Element {
                 Build Them to Last{' '}
                 <span className="highlight blue">Forever</span>
               </Heading>
-              <Button variant="primary" size="md" paddingY="6">
-                Download Brochure
-              </Button>
+              <Link href="/brochure.pdf">
+                <Button variant="primary" size="md" paddingY="6">
+                  Download Brochure
+                </Button>
+              </Link>
             </Box>
             <HeroImageCollageGrid />
           </Flex>
