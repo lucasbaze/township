@@ -14,13 +14,13 @@ import axios from 'axios';
 
 interface FormValues {
   name: string;
-  phone: string;
   email: string;
   message: string;
 }
 
 export const ContactUsForm: React.FC = () => {
   const {
+    reset,
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
@@ -41,6 +41,7 @@ export const ContactUsForm: React.FC = () => {
         isClosable: true,
         position: 'top',
       });
+      reset();
     } catch (error) {
       toast({
         title: 'An error occurred.',
@@ -67,23 +68,6 @@ export const ContactUsForm: React.FC = () => {
           />
           <FormErrorMessage>
             {errors.name && (errors.name.message as React.ReactNode)}
-          </FormErrorMessage>
-        </FormControl>
-
-        <FormControl isInvalid={!!errors.phone} mb={4}>
-          <Input
-            id="phone"
-            placeholder="Phone Number"
-            {...register('phone', {
-              required: 'Phone number is required',
-              pattern: {
-                value: /^\d{10}$/,
-                message: 'Invalid phone number',
-              },
-            })}
-          />
-          <FormErrorMessage>
-            {errors.phone && (errors.phone.message as React.ReactNode)}
           </FormErrorMessage>
         </FormControl>
 
