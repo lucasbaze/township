@@ -23,8 +23,6 @@ export default function Page(): JSX.Element {
           label="About Us"
           title="Our Mission"
           subtitle="Our mission is to build an ecosystem of Texas businesses that creates fulfillment, wealth, and community for generations."
-          buttonText="Learn more"
-          buttonHref="#"
         />
         <Box paddingTop={24} paddingBottom={{ base: 10, md: 24 }}>
           <SectionTitle

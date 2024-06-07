@@ -26,8 +26,8 @@ export const NextShadowImage = ({
         top="50%"
         left="50%"
         transform="translate(-50%, -45%)"
-        w="95%"
-        h="95%"
+        w="90%"
+        h="90%"
         zIndex={-1}
         borderRadius="md"
       >
@@ -59,7 +59,7 @@ export const NextShadowImage = ({
         height="500"
         src={src}
         alt={alt}
-        style={{ borderRadius: '4px' }}
+        style={{ borderRadius: '2px', filter: 'sepia(0.1)' }}
       />
     </Box>
   );

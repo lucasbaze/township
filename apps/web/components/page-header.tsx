@@ -1,12 +1,4 @@
-import {
-  Box,
-  Flex,
-  Stack,
-  Image,
-  Button,
-  Heading,
-  Text,
-} from '@chakra-ui/react';
+import { Box, Flex, Image, Heading, Text } from '@chakra-ui/react';
 import { ShadowImage } from './shadow-image';
 
 interface PageHeaderProps {
@@ -17,8 +9,6 @@ interface PageHeaderProps {
   label: string;
   title: string;
   subtitle: string;
-  buttonText: string;
-  buttonHref: string;
 }
 
 export const PageHeader = ({
@@ -29,8 +19,6 @@ export const PageHeader = ({
   label,
   title,
   subtitle,
-  buttonText,
-  buttonHref,
 }: PageHeaderProps) => (
   <Box
     display="flex"
@@ -87,9 +75,6 @@ export const PageHeader = ({
       <Text fontSize={{ base: 'md', lg: 'lg' }} mb={6}>
         {subtitle}
       </Text>
-      <Button variant="primary" size="lg">
-        {buttonText}
-      </Button>
     </Box>
   </Box>
 );

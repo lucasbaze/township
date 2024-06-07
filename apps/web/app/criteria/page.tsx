@@ -22,8 +22,6 @@ export default function Page(): JSX.Element {
           label="Criteria"
           title="What we look for"
           subtitle="We look for businesses that directly contribute to building healthy, wealthy, and wise Texans."
-          buttonText="Learn more"
-          buttonHref="#"
         />
         <Box paddingTop={24} paddingBottom={{ base: 10, md: 24 }}>
           <SectionTitle title="Business Criteria" />

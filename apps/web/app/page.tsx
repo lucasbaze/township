@@ -1,4 +1,13 @@
-import { Stack, Box, Heading, Button, Grid, GridItem } from '@chakra-ui/react';
+import {
+  Stack,
+  Box,
+  Heading,
+  Button,
+  Container,
+  Grid,
+  Flex,
+  GridItem,
+} from '@chakra-ui/react';
 
 import { BackgroundSection } from '../components/background-section';
 import { SectionTitle } from '../components/section-title';
@@ -6,54 +15,78 @@ import { ImageBlock } from '../components/description-blocks/image-block';
 
 import { NextShadowImage } from '../components/next-shadow-image';
 
+const HeroImageCollageGrid = () => (
+  <Grid
+    h="200px"
+    templateRows="repeat(2, 1fr)"
+    templateColumns="repeat(3, 1fr)"
+    margin="0 auto"
+    columnGap={2}
+    rowGap={0}
+  >
+    <GridItem rowSpan={1} colSpan={1}>
+      <NextShadowImage
+        src="/images/alamo-full-short.jpeg"
+        alt="Alamo"
+        width={{ base: '100px', md: '200px' }}
+      />
+    </GridItem>
+    <GridItem
+      rowSpan={2}
+      colSpan={2}
+      transform={{ base: 'translateY(30%)', md: 'translateY(50%)' }}
+    >
+      <NextShadowImage
+        src="/images/long-horn-full.png"
+        alt="Texas Long Horn"
+        width={{ base: '200px', md: '400px' }}
+      />
+    </GridItem>
+    <GridItem rowSpan={2} colSpan={1}>
+      <NextShadowImage
+        src="/images/austin-skyline-copy.jpeg"
+        alt="Austin Skyline"
+        width={{ base: '100px', md: '200px' }}
+      />
+    </GridItem>
+  </Grid>
+);
+
 export default function Page(): JSX.Element {
   return (
     <main>
-      <Box pt={{ base: 12, lg: 16 }} pb={{ base: 24, lg: 32 }}>
-        <Grid
-          templateColumns="repeat(2, 1fr)"
-          gap={4}
-          w={{ base: '70%' }}
-          margin="auto"
-          alignItems={'end'}
-        >
-          <GridItem colSpan={1}>
-            <NextShadowImage
-              src="/images/austin-skyline-copy.jpeg"
-              alt="Austin Skyline"
-              width={{ base: '100px', sm: '200px', md: '300px' }}
-            />
-          </GridItem>
-          <GridItem colSpan={1} rowSpan={2}>
-            <NextShadowImage
-              src="/images/texas-long-horn-copy.jpeg"
-              alt="Texas Long Horn"
-              width={{ base: '200px', sm: '274px', md: '480px' }}
-            />
-          </GridItem>
-          <GridItem colSpan={1}>
-            <NextShadowImage
-              src="/images/whataburger.png"
-              alt="Whataburger"
-              width={{ base: '100px', sm: '200px', md: '300px' }}
-            />
-          </GridItem>
-        </Grid>
-        <Box margin="auto" width="370px" textAlign="center" py={16}>
-          <Heading
-            as="h1"
-            fontWeight={500}
-            paddingBottom={8}
-            paddingX={8}
-            lineHeight={1.1}
-            fontSize={{ base: '32px', md: '48px' }}
+      <Box pt={{ base: 6, lg: 16 }} pb={{ base: 24, lg: 32 }}>
+        <Container maxW={'6xl'}>
+          <Flex
+            direction={{ base: 'column-reverse', md: 'row' }}
+            paddingBottom={{ md: 32 }}
           >
-            We Buy Texas Businesses and Build Them to Last Forever
-          </Heading>
-          <Button variant="primary" size="md" paddingY="6">
-            Download Brochure
-          </Button>
-        </Box>
+            <Box
+              position="relative"
+              margin="auto"
+              textAlign={{ base: 'center', md: 'left' }}
+              py={{ base: 16, md: 24 }}
+              maxWidth={{ base: '350px' }}
+              flex={1}
+            >
+              <Heading
+                as="h1"
+                fontWeight={500}
+                paddingBottom={8}
+                lineHeight={1.1}
+                fontSize={{ base: '36px', md: '48px', lg: '54px' }}
+              >
+                We Buy <span className="highlight">Texas</span> Businesses and
+                Build Them to Last{' '}
+                <span className="highlight blue">Forever</span>
+              </Heading>
+              <Button variant="primary" size="md" paddingY="6">
+                Download Brochure
+              </Button>
+            </Box>
+            <HeroImageCollageGrid />
+          </Flex>
+        </Container>
         <BackgroundSection
           title="Long Term Partners"
           subtitle="Township Ventures is a long-term holding company dedicated to partnering with owners to grow their business for a very long time."
@@ -85,7 +118,7 @@ export default function Page(): JSX.Element {
             buttonHref="/about-us"
           />
           <ImageBlock
-            src="./images/riverwalk.jpeg"
+            src="./images/solar-ranching.jpeg"
             alt="San antonio riverwalk"
             imageWidth={{ base: '100%' }}
             iconSrc="./images/city-development.png"

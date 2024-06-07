@@ -49,3 +49,21 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.highlight {
+  position: relative;
+  display: inline-block;
+}
+.highlight::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.1em;
+  height: 0.2em;
+  background-color: #ed3453c2; /* Light pink color for "Texas" */
+  z-index: -1;
+}
+.highlight.blue::after {
+  background-color: #3070e7d0; /* Light blue color for "Forever" */
+}

@@ -64,6 +64,7 @@ export const ContactUsForm: React.FC = () => {
           <Input
             id="name"
             placeholder="Name"
+            style={{ background: '#ffffff' }}
             {...register('name', { required: 'Name is required' })}
           />
           <FormErrorMessage>
@@ -75,6 +76,7 @@ export const ContactUsForm: React.FC = () => {
           <Input
             id="email"
             placeholder="Email"
+            style={{ background: '#ffffff' }}
             {...register('email', {
               required: 'Email is required',
               pattern: {
@@ -93,6 +95,7 @@ export const ContactUsForm: React.FC = () => {
             id="message"
             placeholder="Your message"
             {...register('message', { required: 'Message is required' })}
+            style={{ background: '#ffffff' }}
             height="150px"
           />
           <FormErrorMessage>

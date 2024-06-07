@@ -8,6 +8,7 @@ import {
   Flex,
   Text,
   Link,
+  Image,
   Input,
 } from '@chakra-ui/react';
 import { PhoneIcon, EmailIcon } from '@chakra-ui/icons';
@@ -52,11 +53,24 @@ export default function Page(): JSX.Element {
   return (
     <main>
       <Container
+        position="relative"
         maxW={'6xl'}
         pt={{ base: 12, lg: 16 }}
         pb={{ base: 24, lg: 32 }}
         px={8}
       >
+        <Box
+          position="absolute"
+          top="50%"
+          left="50%"
+          transform="translate(-50%, -50%)"
+        >
+          <Image
+            width="950px"
+            src="./images/texas-map-small.png"
+            opacity={0.8}
+          />
+        </Box>
         <Heading textAlign="center" mb={6}>
           Contact Us
         </Heading>

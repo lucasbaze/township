@@ -21,8 +21,9 @@ const theme = extendTheme({
       baseStyle: {
         padding: '2px 8px',
         fontWeight: '600',
-        borderRadius: '99px',
+        borderRadius: '2px',
         color: 'white',
+        boxShadow: '2px 2px 12px hsl(0deg 0% 0% / 0.2)',
       },
       sizes: {
         md: {
@@ -52,6 +53,7 @@ const theme = extendTheme({
     Textarea: {
       baseStyle: {
         borderRadius: '12px',
+        background: '#ffffff',
       },
     },
     Input: {
@@ -60,6 +62,7 @@ const theme = extendTheme({
           borderRadius: '99px',
           color: 'black',
           fontSize: '14px',
+          background: '#ffffff',
         },
       },
       variants: {

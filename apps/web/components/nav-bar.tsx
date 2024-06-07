@@ -97,6 +97,7 @@ export default function WithSubnavigation() {
                   <HamburgerIcon w={5} h={5} />
                 )
               }
+              boxShadow="none"
               variant={'ghost'}
               aria-label={'Toggle Navigation'}
             />

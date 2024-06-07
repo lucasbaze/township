@@ -24,8 +24,8 @@ export const ShadowImage = ({
         top="50%"
         left="50%"
         transform="translate(-50%, -45%)"
-        w="95%"
-        h="95%"
+        w="90%"
+        h="90%"
         bgImage={`url(${src})`}
         bgSize="contain"
         bgRepeat="no-repeat"
@@ -49,7 +49,7 @@ export const ShadowImage = ({
       <Img
         src={src}
         alt={alt}
-        borderRadius="md"
+        borderRadius="sm"
         zIndex={1}
         filter="sepia(0.5)"
       />

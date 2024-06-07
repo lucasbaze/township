@@ -14,13 +14,11 @@ export default function Page(): JSX.Element {
         <PageHeader
           image1="./images/big-tex.png"
           image1Alt="Big Tex"
-          image2="./images/whataburger.png"
-          image2Alt="Whataburger"
+          image2="./images/oil-man-statue.png"
+          image2Alt="Roughneck"
           label="For Owners"
           title="For Texas Owners"
           subtitle="You’ve worked hard to build something great. Let’s discuss how we could work together!"
-          buttonText="Learn more"
-          buttonHref="#"
         />
         <Box paddingTop={24} paddingBottom={{ base: 10, md: 24 }}>
           <SectionTitle title="Common Owner Questions" />
