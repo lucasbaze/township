@@ -21,7 +21,7 @@ export const IconLinkBlock = ({
   linkText?: string;
 }) => (
   <Stack alignItems="start" gap={{ base: 2, md: 4 }} pb={{ base: 2, md: 4 }}>
-    <Image src={iconSrc} width={iconWidth} pb={4} />
+    {/* <Image src={iconSrc} width={iconWidth} pb={4} /> */}
     <Heading fontSize={{ base: '2xl', md: '3xl' }}>{title}</Heading>
     <Text fontSize={{ base: 'sm', md: 'md' }} pb={2}>
       {description}

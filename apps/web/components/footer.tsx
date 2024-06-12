@@ -46,7 +46,8 @@ export const Footer = () => (
         >
           <Box>
             <Heading
-              fontSize="40px"
+              fontSize="32px"
+              fontWeight={700}
               textAlign={{ base: 'center', lg: 'initial' }}
             >
               Township Ventures

@@ -11,7 +11,7 @@ export const SectionTitle = ({
     spacing={5}
     textAlign="center"
     paddingX={{ sm: 12 }}
-    maxWidth={{ base: '450px', md: '500px' }}
+    maxWidth={{ base: '450px', md: '550px' }}
     margin="0 auto"
   >
     <Box margin="0 auto">
