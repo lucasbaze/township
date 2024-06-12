@@ -96,25 +96,32 @@ export const Footer = () => (
           >
             <ListHeader>Support</ListHeader>
             <Link href={'/contact-us'}>Contact Us</Link>
-            <Link href={'#'}>Privacy</Link>
-            <Link href={'#'}>Terms</Link>
+            <Link href={'https://blog.township.ventures'}>Resources</Link>
+            {/* <Link href={'#'}>Privacy</Link>
+            <Link href={'#'}>Terms</Link> */}
           </Stack>
         </Flex>
         <Stack direction={'column'} alignItems={'center'}>
           <ListHeader>Connect with Us</ListHeader>
           <Stack direction={'row'} spacing={2}>
-            <SocialButton label={'X'} href={'#'}>
+            <SocialButton label={'X'} href={'https://x.com/TownshipTex'}>
               <FaXTwitter />
             </SocialButton>
-            <SocialButton label={'YouTube'} href={'#'}>
+            <SocialButton
+              label={'Linkedin'}
+              href={'https://www.linkedin.com/company/township-ventures'}
+            >
               <FaLinkedinIn />
             </SocialButton>
-            <SocialButton label={'Youtube'} href={'#'}>
+            <SocialButton
+              label={'Youtube'}
+              href={'https://www.youtube.com/@township-ventures'}
+            >
               <FaYoutube />
             </SocialButton>
-            <SocialButton label={'Spotify'} href={'#'}>
+            {/* <SocialButton label={'Spotify'} href={'#'}>
               <FaSpotify />
-            </SocialButton>
+            </SocialButton> */}
           </Stack>
         </Stack>
       </SimpleGrid>

@@ -114,7 +114,7 @@ export default function Page(): JSX.Element {
                 engineering, no business is too complex for me.
                 <br />
                 <br />
-                Texas A&M Alumni. Industrial Engineering.
+                Texas A&M alumni. Industrial Distribution.
               </Text>
             }
           />
@@ -134,7 +134,7 @@ export default function Page(): JSX.Element {
                 can work together.
                 <br />
                 <br />
-                Texas A&M Alumni. Software Engineering
+                Texas A&M alumni. Mechanical Engineering.
               </Text>
             }
           />
@@ -154,7 +154,7 @@ export default function Page(): JSX.Element {
                 generational success.
                 <br />
                 <br />
-                Texas A&M Alumni. Industrial Engineering
+                Texas A&M alumni. Industrial Engineering.
               </Text>
             }
           />
@@ -173,7 +173,7 @@ export default function Page(): JSX.Element {
                 can sustainably grow and expand your business in new ways.
                 <br />
                 <br />
-                LSU alumni. Physics.
+                LSU alumni. Physics & Economics.
               </Text>
             }
           />
