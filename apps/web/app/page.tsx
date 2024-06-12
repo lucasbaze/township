@@ -109,8 +109,8 @@ export default function Page(): JSX.Element {
             iconSrc="./images/cowboy-star.png"
             iconWidth={{ base: '45px', md: '55px' }}
             title="For Owners"
-            description="We strive to make the buying process simple and fair to best setup your business."
-            buttonText="Our Process"
+            description="We strive to make the buying process simple, transparent and fair to ensure a smooth transition and long term success."
+            buttonText="For Owners"
             buttonHref="/for-owners"
           />
           <ImageBlock
@@ -119,9 +119,9 @@ export default function Page(): JSX.Element {
             imageWidth={{ base: '100%' }}
             iconSrc="./images/physical-icon.png"
             iconWidth={{ base: '45px', md: '55px' }}
-            title="Meet the Team"
-            description="We work with business owners to build long-term value for our businesses, communities and families."
-            buttonText="Our Team"
+            title="About us"
+            description="We believe in working collaboratively to build long-term value for our businesses, communities and families."
+            buttonText="About us"
             buttonHref="/about-us"
           />
           <ImageBlock
@@ -130,8 +130,8 @@ export default function Page(): JSX.Element {
             imageWidth={{ base: '100%' }}
             iconSrc="./images/city-development.png"
             iconWidth={{ base: '45px', md: '55px' }}
-            title="What we look for"
-            description="We look for business owners who want to start planning for the next generation of their business. "
+            title="Our Criteria"
+            description="We look for Texas businesses that are stable and will be around for a long time."
             buttonText="Our Criteria"
             buttonHref="/criteria"
           />
