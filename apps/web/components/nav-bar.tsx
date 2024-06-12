@@ -107,15 +107,22 @@ export default function WithSubnavigation() {
             justify={{ base: 'center', lg: 'start' }}
             alignItems="center"
           >
-            <Text
-              textAlign={{ base: 'center', lg: 'left' }}
-              fontFamily={inria.className}
-              fontWeight={600}
-              fontSize={{ base: '20px', md: '24px' }}
-              color={useColorModeValue('gray.700', 'white')}
+            <Link
+              href="/"
+              _hover={{
+                textDecoration: 'none',
+              }}
             >
-              Township Ventures
-            </Text>
+              <Text
+                textAlign={{ base: 'center', lg: 'left' }}
+                fontFamily={inria.className}
+                fontWeight={600}
+                fontSize={{ base: '20px', md: '24px' }}
+                color={useColorModeValue('gray.700', 'white')}
+              >
+                Township Ventures
+              </Text>
+            </Link>
 
             <Flex
               display={{ base: 'none', lg: 'flex' }}
@@ -205,7 +212,8 @@ const DesktopNav = () => {
             fontSize={'sm'}
             color={pathname == navItem.href ? 'brand.primary' : linkColor}
             _hover={{
-              textDecoration: 'none',
+              textDecoration: 'underline',
+              textUnderlineOffset: '4px',
               color: 'brand.primary',
             }}
           >
@@ -291,5 +299,9 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Criteria',
     href: '/criteria',
+  },
+  {
+    label: 'Resources',
+    href: 'https://blog.township.ventures',
   },
 ];

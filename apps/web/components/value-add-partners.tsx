@@ -33,7 +33,7 @@ export const ValueAddPartners = () => (
           textUnderlineOffset="4px"
           display={{ base: 'none', md: 'block' }}
         >
-          Our Team
+          About Us
         </Link>
       </Box>
       <Box flex={1}>

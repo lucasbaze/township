@@ -9,7 +9,7 @@ export const BackgroundSection = ({
 }) => (
   <Stack position="relative" spacing={5} textAlign="center" bg="#FAFBFB">
     <Box
-      maxWidth="450px"
+      maxWidth={{ base: '450px', md: '550px' }}
       margin="0 auto"
       textAlign="center"
       paddingY={{ base: 24, md: 32 }}

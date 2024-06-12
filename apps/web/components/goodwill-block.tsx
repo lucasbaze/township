@@ -8,10 +8,7 @@ import {
   Heading,
   Flex,
   Text,
-  Button,
 } from '@chakra-ui/react';
-
-import { Link } from '@chakra-ui/next-js';
 
 export const GoodwillBlock = () => (
   <Flex
