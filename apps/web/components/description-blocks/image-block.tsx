@@ -45,7 +45,7 @@ export const ImageBlock = ({
         gap={{ base: 2, md: 4 }}
         pb={{ base: 2, md: 4 }}
       >
-        <Image src={iconSrc} width={iconWidth} />
+        {/* <Image src={iconSrc} width={iconWidth} /> */}
         <Heading fontSize={{ base: '2xl', md: '3xl' }}>{title}</Heading>
       </Flex>
       <Text fontSize={{ base: 'sm', md: 'md' }}>{description}</Text>
