@@ -81,8 +81,8 @@ export default function Page(): JSX.Element {
                 lineHeight={1.1}
                 fontSize={{ base: '36px', md: '42px', lg: '54px' }}
               >
-                We Buy <span className="highlight">Texas</span> Businesses and
-                Build Them to Last{' '}
+                We buy <span className="highlight">Texas</span> businesses and
+                build them to last{' '}
                 <span className="highlight blue">Forever</span>
               </Heading>
               <Link href="/brochure.pdf">
