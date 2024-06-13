@@ -15,12 +15,7 @@ import {
 } from '@chakra-ui/react';
 import { Link } from '@chakra-ui/next-js';
 import { ReactNode } from 'react';
-import {
-  FaLinkedinIn,
-  FaSpotify,
-  FaXTwitter,
-  FaYoutube,
-} from 'react-icons/fa6';
+import { FaLinkedinIn, FaXTwitter, FaYoutube } from 'react-icons/fa6';
 import { TexasFlag } from './texas-flag';
 import { SocialButton } from './social-button';
 
@@ -65,17 +60,23 @@ export const Footer = () => (
           <Stack
             align={'flex-start'}
             pb={4}
-            maxWidth="445px"
+            maxWidth="650px"
             minWidth={{ sm: '400px' }}
           >
-            <Stack direction={'row'} gap={4} width="100%">
+            <Flex
+              direction={{ base: 'column', md: 'row' }}
+              alignItems="stretch"
+              gap={4}
+              width={{ base: '300px', md: '100%' }}
+              margin="0 auto"
+            >
               <Input
                 variant="secondary"
                 placeholder={'Enter your email'}
                 bg={useColorModeValue('whiteAlpha.900', 'whiteAlpha.100')}
               />
               <Button variant={'outline'}>Subscribe</Button>
-            </Stack>
+            </Flex>
           </Stack>
         </Stack>
         <Flex pb={4} width="300px" margin="0 auto">

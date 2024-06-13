@@ -38,6 +38,7 @@ export const NextShadowImage = ({
           alt={alt}
           style={{
             filter: 'blur(20px)',
+            transform: 'translateZ(0)',
           }}
         />
       </Box>

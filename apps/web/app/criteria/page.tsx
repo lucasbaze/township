@@ -71,29 +71,23 @@ export default function Page(): JSX.Element {
         </Box>
         <Stack gap={{ base: 20, md: 16 }}>
           <ImageBlock
-            src="./images/construction.png"
+            src="/images/construction.png"
             alt="Construction Site"
-            imageWidth={{ base: '100%' }}
-            iconSrc="./images/city-development.png"
-            iconWidth={{ base: '45px', md: '55px' }}
+            imageWidth={{ base: '100%', md: '280px' }}
             title="Land & City Development"
             description="Businesses that architect, build, and maintain the land and infrastructure for our cities."
           />
           <ImageBlock
-            src="./images/baylor-statue.jpeg"
+            src="/images/baylor-statue.jpeg"
             alt="Baylor Statue of Rufus Burleson"
-            imageWidth={{ base: '100%' }}
-            iconSrc="./images/child-education.png"
-            iconWidth={{ base: '45px', md: '55px' }}
+            imageWidth={{ base: '100%', md: '280px' }}
             title="Education"
             description="Businesses that create opportunities to learn new skills, grow, and ultimately thrive."
           />
           <ImageBlock
-            src="./images/running.png"
+            src="/images/running.png"
             alt="Man Running"
-            imageWidth={{ base: '100%' }}
-            iconSrc="./images/physical-icon.png"
-            iconWidth={{ base: '45px', md: '55px' }}
+            imageWidth={{ base: '100%', md: '280px' }}
             title="Physical Health & Wellness"
             description="Businesses that focus on the long term physical health and wellbeing of people."
           />

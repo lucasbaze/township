@@ -5,14 +5,12 @@ import { Flex, Box, Image, Heading, Text } from '@chakra-ui/react';
 
 import { Link } from '@chakra-ui/next-js';
 
-import { ShadowImage } from '../shadow-image';
+import { NextShadowImage } from '../next-shadow-image';
 
 export const ImageBlock = ({
   src,
   alt,
   imageWidth,
-  iconSrc,
-  iconWidth,
   title,
   description,
   buttonText,
@@ -21,8 +19,6 @@ export const ImageBlock = ({
   src: string;
   alt: string;
   imageWidth: ResponsiveObject<string>;
-  iconSrc: string;
-  iconWidth: ResponsiveObject<string>;
   title: string;
   description: string;
   buttonText?: string;
@@ -35,8 +31,8 @@ export const ImageBlock = ({
     maxWidth={{ base: '400px', md: '850px' }}
     margin={{ base: '0 auto' }}
   >
-    <Box pb={2} maxWidth={{ md: '300px', lg: '350px' }}>
-      <ShadowImage src={src} alt={alt} width={imageWidth} />
+    <Box pb={2} width={{ md: '280px' }}>
+      <NextShadowImage src={src} alt={alt} width={imageWidth} />
     </Box>
     <Box paddingX={2} marginTop={{ md: '-20px' }}>
       <Flex
@@ -45,7 +41,6 @@ export const ImageBlock = ({
         gap={{ base: 2, md: 4 }}
         pb={{ base: 2, md: 4 }}
       >
-        {/* <Image src={iconSrc} width={iconWidth} /> */}
         <Heading fontSize={{ base: '2xl', md: '3xl' }}>{title}</Heading>
       </Flex>
       <Text fontSize={{ base: 'sm', md: 'md' }}>{description}</Text>

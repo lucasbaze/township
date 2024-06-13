@@ -12,30 +12,11 @@ import { SocialButton } from '../../components/social-button';
 
 import {
   FaLinkedinIn,
-  FaSpotify,
   FaXTwitter,
-  FaYoutube,
   FaGithub,
   FaMedium,
   FaHouse,
 } from 'react-icons/fa6';
-
-const SocialLinks = () => (
-  <>
-    <SocialButton noBg label={'X'} href={'#'}>
-      <FaXTwitter />
-    </SocialButton>
-    <SocialButton noBg label={'YouTube'} href={'#'}>
-      <FaLinkedinIn />
-    </SocialButton>
-    <SocialButton noBg label={'Youtube'} href={'#'}>
-      <FaYoutube />
-    </SocialButton>
-    <SocialButton noBg label={'Spotify'} href={'#'}>
-      <FaSpotify />
-    </SocialButton>
-  </>
-);
 
 const TeamBlocks = () => (
   <>
@@ -280,8 +261,11 @@ export default function Page(): JSX.Element {
             </Stack>
           </Flex>
         </Box>
-        <Box paddingTop={24} paddingBottom={{ base: 10, md: 24 }}>
-          <SectionTitle title="Our Team" />
+        <Box paddingTop={24} paddingBottom={{ base: 10, md: 32 }}>
+          <SectionTitle
+            title="Our Team"
+            subtitle="We have a network of talent & advisors in Energy, Private Equity, Real Estate, Finance, Manufacturing, Distribution, Bitcoin, Software, and beyond to ensure we're properly assigning risk and allocating capital."
+          />
         </Box>
         <Stack gap={24}>
           <TeamBlocks />
