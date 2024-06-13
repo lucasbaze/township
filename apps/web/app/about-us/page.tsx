@@ -1,3 +1,5 @@
+'use client';
+
 import { Container, Box, Flex, Stack, Text } from '@chakra-ui/react';
 
 import { PageHeader } from '../../components/page-header';
@@ -5,6 +7,190 @@ import { SectionTitle } from '../../components/section-title';
 import { TeamBlock } from '../../components/description-blocks/team-block';
 import { SuccessBlock } from '../../components/description-blocks/success-block';
 import { ShadowImage } from '../../components/shadow-image';
+
+import { SocialButton } from '../../components/social-button';
+
+import {
+  FaLinkedinIn,
+  FaSpotify,
+  FaXTwitter,
+  FaYoutube,
+  FaGithub,
+  FaMedium,
+  FaHouse,
+} from 'react-icons/fa6';
+
+const SocialLinks = () => (
+  <>
+    <SocialButton noBg label={'X'} href={'#'}>
+      <FaXTwitter />
+    </SocialButton>
+    <SocialButton noBg label={'YouTube'} href={'#'}>
+      <FaLinkedinIn />
+    </SocialButton>
+    <SocialButton noBg label={'Youtube'} href={'#'}>
+      <FaYoutube />
+    </SocialButton>
+    <SocialButton noBg label={'Spotify'} href={'#'}>
+      <FaSpotify />
+    </SocialButton>
+  </>
+);
+
+const TeamBlocks = () => (
+  <>
+    <TeamBlock
+      src="./images/lucas-headshot.png"
+      alt="Lucas Headshot"
+      imageWidth={{ base: '50%', md: '100%' }}
+      title="Lucas Bazemore"
+      socials={
+        <>
+          <SocialButton noBg label={'X'} href={'https://x.com/LucasBazemore'}>
+            <FaXTwitter />
+          </SocialButton>
+          <SocialButton
+            noBg
+            label={'LinkedIn'}
+            href={'https://www.linkedin.com/in/lucas-bazemore/'}
+          >
+            <FaLinkedinIn />
+          </SocialButton>
+          <SocialButton
+            noBg
+            label={'Medium'}
+            href={'https://medium.com/@lucasbazemore'}
+          >
+            <FaMedium />
+          </SocialButton>
+          <SocialButton
+            noBg
+            label={'FaGithub'}
+            href={'https://github.com/lucasbaze'}
+          >
+            <FaGithub />
+          </SocialButton>
+        </>
+      }
+      description={
+        <Text fontSize={{ base: 'sm', md: 'md' }}>
+          My focus is working with you and your team to build a long-term
+          strategic roadmap and then pounding the pavement to make it happen.
+          <br />
+          <br />
+          As 3x startup founder and former product manager and director of
+          engineering, no business is too complex for me.
+          <br />
+          <br />
+          Texas A&M alumni. Industrial Distribution.
+        </Text>
+      }
+    />
+    <TeamBlock
+      src="./images/cameron-headshot.jpeg"
+      alt="Cameron Kelley Headshot"
+      imageWidth={{ base: '50%', md: '100%' }}
+      title="Cameron Kelley"
+      socials={
+        <>
+          <SocialButton noBg label={'Home'} href={'https://www.cameronk.org/'}>
+            <FaHouse />
+          </SocialButton>
+          <SocialButton noBg label={'X'} href={'https://x.com/c3kel'}>
+            <FaXTwitter />
+          </SocialButton>
+          <SocialButton
+            noBg
+            label={'LinkedIn'}
+            href={'https://www.linkedin.com/in/cameronskelley/'}
+          >
+            <FaLinkedinIn />
+          </SocialButton>
+          <SocialButton
+            noBg
+            label={'FaGithub'}
+            href={'https://github.com/cameronk'}
+          >
+            <FaGithub />
+          </SocialButton>
+        </>
+      }
+      description={
+        <Text fontSize={{ base: 'sm', md: 'md' }}>
+          My focus is on operationalizing your strategic roadmap, finding
+          exceptional talent, and bringing cutting edge technology and
+          automation to your business.
+          <br />
+          <br />
+          As 4x startup founder and former VC operator, I’m confident we can
+          work together.
+          <br />
+          <br />
+          Texas A&M alumni. Mechanical Engineering.
+        </Text>
+      }
+    />
+    <TeamBlock
+      src="./images/roberto-headshot.jpeg"
+      alt="Roberto Gargurevich Headshot"
+      imageWidth={{ base: '50%', md: '100%' }}
+      title="Roberto Gargurevich"
+      socials={
+        <>
+          <SocialButton noBg label={'X'} href={'https://x.com/gargu_R'}>
+            <FaXTwitter />
+          </SocialButton>
+          <SocialButton
+            noBg
+            label={'LinkedIn'}
+            href={'https://www.linkedin.com/in/roberto-gargurevich/'}
+          >
+            <FaLinkedinIn />
+          </SocialButton>
+        </>
+      }
+      description={
+        <Text fontSize={{ base: 'sm', md: 'md' }}>
+          My focus is on the financial strategy and understanding of your
+          business and how we can create repeatable, measurable success.
+          <br />
+          <br />
+          With over 6 years in business strategy and intelligence for a
+          Berkshire Hathaway company, I’m confident we can build generational
+          success.
+          <br />
+          <br />
+          Texas A&M alumni. Industrial Engineering.
+        </Text>
+      }
+    />
+    <TeamBlock
+      src="./images/darian-headshot.jpg"
+      alt="Darian Bajmanlou Headshot"
+      imageWidth={{ base: '50%', md: '100%' }}
+      title="Darian Bajmanlou"
+      socials={
+        <>
+          <SocialButton noBg label={'X'} href={'https://x.com/Bajmanlou'}>
+            <FaXTwitter />
+          </SocialButton>
+        </>
+      }
+      description={
+        <Text fontSize={{ base: 'sm', md: 'md' }}>
+          My focus is on finding opportunities in places people aren’t looking.
+          <br />
+          <br />
+          With over 8 years in Texas real estate, I’m confident that we can
+          sustainably grow and expand your business in new ways.
+          <br />
+          <br />
+          LSU alumni. Physics & Economics.
+        </Text>
+      }
+    />
+  </>
+);
 
 export default function Page(): JSX.Element {
   return (
@@ -98,85 +284,7 @@ export default function Page(): JSX.Element {
           <SectionTitle title="Our Team" />
         </Box>
         <Stack gap={24}>
-          <TeamBlock
-            src="./images/lucas-headshot.png"
-            alt="Lucas Headshot"
-            imageWidth={{ base: '50%', md: '100%' }}
-            title="Lucas Bazemore"
-            description={
-              <Text fontSize={{ base: 'sm', md: 'md' }}>
-                My focus is working with you and your team to build a long-term
-                strategic roadmap and then pounding the pavement to make it
-                happen.
-                <br />
-                <br />
-                As 3x startup founder and former product manager and director of
-                engineering, no business is too complex for me.
-                <br />
-                <br />
-                Texas A&M alumni. Industrial Distribution.
-              </Text>
-            }
-          />
-          <TeamBlock
-            src="./images/cameron-headshot.jpeg"
-            alt="Cameron Kelley Headshot"
-            imageWidth={{ base: '50%', md: '100%' }}
-            title="Cameron Kelley"
-            description={
-              <Text fontSize={{ base: 'sm', md: 'md' }}>
-                My focus is on operationalizing your strategic roadmap, finding
-                exceptional talent, and bringing cutting edge technology and
-                automation to your business.
-                <br />
-                <br />
-                As 4x startup founder and former VC operator, I’m confident we
-                can work together.
-                <br />
-                <br />
-                Texas A&M alumni. Mechanical Engineering.
-              </Text>
-            }
-          />
-          <TeamBlock
-            src="./images/roberto-headshot.jpeg"
-            alt="Roberto Gargurevich Headshot"
-            imageWidth={{ base: '50%', md: '100%' }}
-            title="Roberto Gargurevich"
-            description={
-              <Text fontSize={{ base: 'sm', md: 'md' }}>
-                My focus is on the financial strategy and understanding of your
-                business and how we can create repeatable, measurable success.
-                <br />
-                <br />
-                With over 6 years in business strategy and intelligence for a
-                Berkshire Hathaway company, I’m confident we can build
-                generational success.
-                <br />
-                <br />
-                Texas A&M alumni. Industrial Engineering.
-              </Text>
-            }
-          />
-          <TeamBlock
-            src="./images/darian-headshot.jpg"
-            alt="Darian Bajmanlou Headshot"
-            imageWidth={{ base: '50%', md: '100%' }}
-            title="Darian Bajmanlou"
-            description={
-              <Text fontSize={{ base: 'sm', md: 'md' }}>
-                My focus is on finding opportunities in places people aren’t
-                looking.
-                <br />
-                <br />
-                With over 8 years in Texas real estate, I’m confident that we
-                can sustainably grow and expand your business in new ways.
-                <br />
-                <br />
-                LSU alumni. Physics & Economics.
-              </Text>
-            }
-          />
+          <TeamBlocks />
         </Stack>
       </Container>
     </main>

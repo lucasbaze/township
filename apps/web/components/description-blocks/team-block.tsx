@@ -1,26 +1,7 @@
 'use client';
 
 import { ResponsiveObject } from '@chakra-ui/styled-system';
-import {
-  Flex,
-  Box,
-  Button,
-  Image,
-  Heading,
-  Text,
-  Stack,
-} from '@chakra-ui/react';
-
-import { Link } from '@chakra-ui/next-js';
-
-import { SocialButton } from '../social-button';
-
-import {
-  FaLinkedinIn,
-  FaSpotify,
-  FaXTwitter,
-  FaYoutube,
-} from 'react-icons/fa6';
+import { Flex, Box, Heading, Stack } from '@chakra-ui/react';
 
 import { ShadowImage } from '../shadow-image';
 
@@ -29,12 +10,14 @@ export const TeamBlock = ({
   alt,
   imageWidth,
   title,
+  socials,
   description,
 }: {
   src: string;
   alt: string;
   imageWidth: ResponsiveObject<string>;
   title: string;
+  socials: React.ReactNode;
   description: string | React.ReactNode;
 }) => (
   <Flex
@@ -53,18 +36,7 @@ export const TeamBlock = ({
       </Heading>
       <Stack pb={2}>
         <Stack direction={'row'} spacing={2}>
-          <SocialButton noBg label={'X'} href={'#'}>
-            <FaXTwitter />
-          </SocialButton>
-          <SocialButton noBg label={'YouTube'} href={'#'}>
-            <FaLinkedinIn />
-          </SocialButton>
-          <SocialButton noBg label={'Youtube'} href={'#'}>
-            <FaYoutube />
-          </SocialButton>
-          <SocialButton noBg label={'Spotify'} href={'#'}>
-            <FaSpotify />
-          </SocialButton>
+          {socials}
         </Stack>
       </Stack>
       {description && description}
