@@ -30,7 +30,7 @@ export const BackgroundSection = ({
           alt="Texas Map"
           height="250"
           width="250"
-          src="/images/texas-raster-map.png"
+          src="/images/texas-raster-map.webp"
         />
       </Box>
       <Flex

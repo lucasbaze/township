@@ -61,7 +61,7 @@ export const PageHeader = ({
     >
       <Flex alignItems="center" gap={{ base: 2, md: 4 }} pb={4}>
         <Image
-          src="./images/cowboy-star.png"
+          src="./images/big-cowboy-star.webp"
           alt="Cowboy Star"
           width={{ base: '25px', lg: '45px' }}
         />

@@ -28,7 +28,7 @@ const HeroImageCollageGrid = () => (
   >
     <GridItem rowSpan={1} colSpan={1}>
       <NextShadowImage
-        src="/images/alamo-full-copy.jpeg"
+        src="/images/alamo-full.webp"
         alt="Alamo"
         width={{ base: '120px', md: '125px', lg: '150px' }}
       />
@@ -39,14 +39,14 @@ const HeroImageCollageGrid = () => (
       transform={{ base: 'translateY(20%)', lg: 'translateY(15%)' }}
     >
       <NextShadowImage
-        src="/images/bitcoin-mining-riot-large.jpeg"
-        alt="Texas Long Horn"
+        src="/images/bitcoin-mining-riot.webp"
+        alt="Riot Bitcoin Mining Facility"
         width={{ base: '220px', md: '250px', lg: '300px' }}
       />
     </GridItem>
     <GridItem rowSpan={2} colSpan={1}>
       <NextShadowImage
-        src="/images/texas-bridge.png"
+        src="/images/texas-bridge.webp"
         alt="Texas bridge"
         width={{ base: '120px', md: '125px', lg: '150px' }}
       />
@@ -115,7 +115,7 @@ export default function Page(): JSX.Element {
         </Box>
         <Stack gap={12} px={12}>
           <ImageBlock
-            src="/images/big-tex.png"
+            src="/images/big-tex.webp"
             alt="Big Tex"
             imageWidth={{ base: '100%', md: '280px' }}
             title="For Owners"
@@ -124,7 +124,7 @@ export default function Page(): JSX.Element {
             buttonHref="/for-owners"
           />
           <ImageBlock
-            src="/images/am-campus-aerial.png"
+            src="/images/am-campus-aerial.webp"
             alt="A&M Campus"
             imageWidth={{ base: '100%', md: '280px' }}
             title="About us"
@@ -133,7 +133,7 @@ export default function Page(): JSX.Element {
             buttonHref="/about-us"
           />
           <ImageBlock
-            src="/images/solar-ranching.jpeg"
+            src="/images/solar-ranching.webp"
             alt="San antonio riverwalk"
             imageWidth={{ base: '100%', md: '280px' }}
             title="Our Criteria"

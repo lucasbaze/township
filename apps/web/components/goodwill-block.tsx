@@ -23,20 +23,27 @@ export const GoodwillBlock = () => (
         gap={4}
       >
         <GridItem rowSpan={1} colSpan={1}>
-          <Image borderRadius="md" width="100%" src="./images/riverwalk.jpeg" />
-        </GridItem>
-        <GridItem rowSpan={2} colSpan={1}>
           <Image
             borderRadius="md"
             width="100%"
-            src="./images/oil-man-statue.png"
+            src="./images/riverwalk.webp"
+            alt="San Antonio Riverwalk"
           />
         </GridItem>
         <GridItem rowSpan={2} colSpan={1}>
           <Image
             borderRadius="md"
             width="100%"
-            src="./images/lady-bird-lake.png"
+            src="./images/oil-man-statue.webp"
+            alt="Oil man Roughneck"
+          />
+        </GridItem>
+        <GridItem rowSpan={2} colSpan={1}>
+          <Image
+            borderRadius="md"
+            width="100%"
+            src="./images/lady-bird-lake.webp"
+            alt="Lady bird lake"
           />
         </GridItem>
       </Grid>

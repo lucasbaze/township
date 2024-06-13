@@ -65,7 +65,7 @@ export default function Page(): JSX.Element {
         >
           <Image
             width="950px"
-            src="./images/texas-map-small.png"
+            src="./images/texas-map-small.webp"
             opacity={0.8}
           />
         </Box>

@@ -15,9 +15,9 @@ export default function Page(): JSX.Element {
         px={8}
       >
         <PageHeader
-          image1="/images/solar-farm-helios.jpeg"
+          image1="/images/solar-farm-helios.webp"
           image1Alt="Solar Farm Helios"
-          image2="/images/pecos-river-bridge.jpeg"
+          image2="/images/pecos-river-bridge.webp"
           image2Alt="Pecos River Bridge"
           label="Criteria"
           title="What we look for"
@@ -71,21 +71,21 @@ export default function Page(): JSX.Element {
         </Box>
         <Stack gap={{ base: 20, md: 16 }}>
           <ImageBlock
-            src="/images/construction.png"
+            src="/images/construction.webp"
             alt="Construction Site"
             imageWidth={{ base: '100%', md: '280px' }}
             title="Land & City Development"
             description="Businesses that architect, build, and maintain the land and infrastructure for our cities."
           />
           <ImageBlock
-            src="/images/baylor-statue.jpeg"
+            src="/images/baylor-statue.webp"
             alt="Baylor Statue of Rufus Burleson"
             imageWidth={{ base: '100%', md: '280px' }}
             title="Education"
             description="Businesses that create opportunities to learn new skills, grow, and ultimately thrive."
           />
           <ImageBlock
-            src="/images/running.png"
+            src="/images/running.webp"
             alt="Man Running"
             imageWidth={{ base: '100%', md: '280px' }}
             title="Physical Health & Wellness"

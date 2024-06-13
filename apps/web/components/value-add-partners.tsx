@@ -38,7 +38,8 @@ export const ValueAddPartners = () => (
       <Box flex={1}>
         <Image
           width={{ base: '100px', md: '200px', lg: '300px' }}
-          src="./images/big-cowboy-star.png"
+          src="./images/big-cowboy-star.webp"
+          alt="Cartoon cowboy on horse"
         />
       </Box>
     </Flex>

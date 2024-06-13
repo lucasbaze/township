@@ -21,7 +21,7 @@ import {
 const TeamBlocks = () => (
   <>
     <TeamBlock
-      src="./images/lucas-headshot.png"
+      src="./images/lucas-headshot.webp"
       alt="Lucas Headshot"
       imageWidth={{ base: '50%', md: '100%' }}
       title="Lucas Bazemore"
@@ -68,7 +68,7 @@ const TeamBlocks = () => (
       }
     />
     <TeamBlock
-      src="./images/cameron-headshot.jpeg"
+      src="./images/cameron-headshot.webp"
       alt="Cameron Kelley Headshot"
       imageWidth={{ base: '50%', md: '100%' }}
       title="Cameron Kelley"
@@ -112,7 +112,7 @@ const TeamBlocks = () => (
       }
     />
     <TeamBlock
-      src="./images/roberto-headshot.jpeg"
+      src="./images/roberto-headshot.webp"
       alt="Roberto Gargurevich Headshot"
       imageWidth={{ base: '50%', md: '100%' }}
       title="Roberto Gargurevich"
@@ -146,7 +146,7 @@ const TeamBlocks = () => (
       }
     />
     <TeamBlock
-      src="./images/darian-headshot.jpg"
+      src="./images/darian-headshot.webp"
       alt="Darian Bajmanlou Headshot"
       imageWidth={{ base: '50%', md: '100%' }}
       title="Darian Bajmanlou"
@@ -183,9 +183,9 @@ export default function Page(): JSX.Element {
         px={8}
       >
         <PageHeader
-          image1="/images/austin-skyline-copy.jpeg"
+          image1="/images/austin-skyline-copy.webp"
           image1Alt="Austin Skyline"
-          image2="/images/texas-sign.png"
+          image2="/images/texas-sign.webp"
           image2Alt="Texas Sign"
           label="About Us"
           title="Our Mission"
@@ -205,13 +205,13 @@ export default function Page(): JSX.Element {
           >
             <Stack flex={1} gap={12}>
               <ShadowImage
-                src="./images/solar-ranching.png"
+                src="./images/solar-ranching-wide.webp"
                 alt="solar ranching"
                 width={{ base: '300px', md: '350px' }}
               />
               <Box display={{ base: 'none', lg: 'block' }}>
                 <ShadowImage
-                  src="./images/texas-am-sully.jpeg"
+                  src="./images/texas-am-sully.webp"
                   alt="A&M statue of Lawrence Sullivan"
                   width={{ base: '300px', md: '350px' }}
                 />
@@ -264,7 +264,7 @@ export default function Page(): JSX.Element {
         <Box paddingTop={24} paddingBottom={{ base: 10, md: 32 }}>
           <SectionTitle
             title="Our Team"
-            subtitle="We have a network of talent & advisors in Energy, Private Equity, Real Estate, Finance, Manufacturing, Distribution, Bitcoin, Software, and beyond to ensure we're properly assigning risk and allocating capital."
+            subtitle="We have a network of talent & advisors in Energy, Private Equity, Real Estate, Finance, Manufacturing, Distribution, Bitcoin, Software, and many more to ensure we're properly assigning risk and allocating capital."
           />
         </Box>
         <Stack gap={24}>
