@@ -128,6 +128,7 @@ export default function WithSubnavigation() {
               display={{ base: 'none', lg: 'flex' }}
               marginLeft={{ lg: 'auto' }}
               ml={10}
+              mr={6}
             >
               <DesktopNav />
             </Flex>

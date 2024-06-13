@@ -27,27 +27,27 @@ const HeroImageCollageGrid = () => (
   >
     <GridItem rowSpan={1} colSpan={1}>
       <NextShadowImage
-        src="/images/texas-long-horn-copy.jpeg"
+        src="/images/alamo-full-copy.jpeg"
         alt="Alamo"
-        width={{ base: '120px', md: '125px', lg: '200px' }}
+        width={{ base: '120px', md: '125px', lg: '150px' }}
       />
     </GridItem>
     <GridItem
       rowSpan={2}
       colSpan={2}
-      transform={{ base: 'translateY(20%)', lg: 'translateY(30%)' }}
+      transform={{ base: 'translateY(20%)', lg: 'translateY(15%)' }}
     >
       <NextShadowImage
         src="/images/bitcoin-mining-riot-large.jpeg"
         alt="Texas Long Horn"
-        width={{ base: '240px', md: '250px', lg: '400px' }}
+        width={{ base: '210px', md: '250px', lg: '300px' }}
       />
     </GridItem>
     <GridItem rowSpan={2} colSpan={1}>
       <NextShadowImage
         src="/images/texas-bridge.png"
         alt="Texas bridge"
-        width={{ base: '120px', md: '125px', lg: '200px' }}
+        width={{ base: '120px', md: '125px', lg: '150px' }}
       />
     </GridItem>
   </Grid>
@@ -62,7 +62,7 @@ export default function Page(): JSX.Element {
             direction={{ base: 'column-reverse', md: 'row' }}
             paddingY={{ md: 16 }}
             paddingX={{ md: 4 }}
-            paddingBottom={{ lg: 40 }}
+            paddingBottom={{ lg: 12 }}
             marginY={{ md: 12, lg: 16 }}
           >
             <Box
@@ -70,7 +70,7 @@ export default function Page(): JSX.Element {
               margin="auto"
               textAlign={{ base: 'center', md: 'left' }}
               pb={{ base: 16 }}
-              pt={{ base: 16, md: 8, lg: 20 }}
+              pt={{ base: 16, md: 8, lg: 2 }}
               maxWidth={{ base: '350px', md: '450px', lg: 'unset' }}
               flex={1}
             >
@@ -79,11 +79,22 @@ export default function Page(): JSX.Element {
                 fontWeight={500}
                 paddingBottom={8}
                 lineHeight={1.1}
-                fontSize={{ base: '36px', md: '42px', lg: '54px' }}
+                fontSize={{ base: '36px', md: '42px', lg: '64px' }}
               >
-                We buy <span className="highlight">Texas</span> businesses and
+                We buy Texas
+                <Box
+                  as="img"
+                  src="/images/texas-flag.svg"
+                  display="inline"
+                  width={{ base: '60px', md: '70px', lg: '90px' }}
+                  height={{ base: '28px', md: '30px', lg: '40px' }}
+                  mx="1"
+                  my="-2px"
+                />
+                businesses and build them to last generations.
+                {/* We buy <span className="highlight">Texas</span> businesses and
                 build them to last{' '}
-                <span className="highlight blue">Forever</span>
+                <span className="highlight blue">Generations</span> */}
               </Heading>
               <Link href="/brochure.pdf">
                 <Button variant="primary" size="md" paddingY="6">
