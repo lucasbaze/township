@@ -183,9 +183,9 @@ export default function Page(): JSX.Element {
         px={8}
       >
         <PageHeader
-          image1="./images/austin-skyline-copy.jpeg"
+          image1="/images/austin-skyline-copy.jpeg"
           image1Alt="Austin Skyline"
-          image2="./images/texas-sign.png"
+          image2="/images/texas-sign.png"
           image2Alt="Texas Sign"
           label="About Us"
           title="Our Mission"

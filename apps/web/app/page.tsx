@@ -24,6 +24,7 @@ const HeroImageCollageGrid = () => (
     margin="0 auto"
     columnGap={2}
     rowGap={0}
+    width={{ base: '340px', md: 'unset' }}
   >
     <GridItem rowSpan={1} colSpan={1}>
       <NextShadowImage
@@ -40,7 +41,7 @@ const HeroImageCollageGrid = () => (
       <NextShadowImage
         src="/images/bitcoin-mining-riot-large.jpeg"
         alt="Texas Long Horn"
-        width={{ base: '210px', md: '250px', lg: '300px' }}
+        width={{ base: '220px', md: '250px', lg: '300px' }}
       />
     </GridItem>
     <GridItem rowSpan={2} colSpan={1}>
@@ -63,7 +64,7 @@ export default function Page(): JSX.Element {
             paddingY={{ md: 16 }}
             paddingX={{ md: 4 }}
             paddingBottom={{ lg: 12 }}
-            marginY={{ md: 12, lg: 16 }}
+            marginY={{ base: 8, md: 12, lg: 20 }}
           >
             <Box
               position="relative"
@@ -71,7 +72,7 @@ export default function Page(): JSX.Element {
               textAlign={{ base: 'center', md: 'left' }}
               pb={{ base: 16 }}
               pt={{ base: 16, md: 8, lg: 2 }}
-              maxWidth={{ base: '350px', md: '450px', lg: 'unset' }}
+              maxWidth={{ base: '350px', md: '450px', lg: '600px' }}
               flex={1}
             >
               <Heading
@@ -79,7 +80,7 @@ export default function Page(): JSX.Element {
                 fontWeight={500}
                 paddingBottom={8}
                 lineHeight={1.1}
-                fontSize={{ base: '36px', md: '42px', lg: '64px' }}
+                fontSize={{ base: '36px', md: '42px', lg: '60px' }}
               >
                 We buy Texas
                 <Box

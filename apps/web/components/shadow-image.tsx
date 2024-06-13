@@ -36,7 +36,7 @@ export const ShadowImage = ({
       {withBorder && (
         <Box
           position="absolute"
-          background="white"
+          background="#FFFBF8"
           top="50%"
           left="50%"
           transform="translate(-45%, -45%)"

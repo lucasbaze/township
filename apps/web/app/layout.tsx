@@ -18,7 +18,10 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body
+        className={poppins.className}
+        style={{ backgroundColor: '#FFFBF8' }}
+      >
         <Providers>
           <NavBar />
           {children}

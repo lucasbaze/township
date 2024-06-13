@@ -1,5 +1,6 @@
 import { Box, Flex, Image, Heading, Text } from '@chakra-ui/react';
-import { ShadowImage } from './shadow-image';
+
+import { NextShadowImage } from './next-shadow-image';
 
 interface PageHeaderProps {
   image1: string;
@@ -32,10 +33,11 @@ export const PageHeader = ({
       margin={{ base: '0 auto 24px auto', md: '0 24px 24px auto' }}
       width={{ base: '350px' }}
     >
-      <ShadowImage
+      <NextShadowImage
         src={image1}
         alt={image1Alt}
         width={{ base: '250px', lg: '350px' }}
+        priority
       />
       <Box
         position="absolute"
@@ -43,11 +45,12 @@ export const PageHeader = ({
         right={{ base: '20px', lg: '-20px' }}
         zIndex={1}
       >
-        <ShadowImage
+        <NextShadowImage
           src={image2}
           alt={image2Alt}
           width={{ base: '150px', lg: '180px' }}
           withBorder
+          priority
         />
       </Box>
     </Box>
@@ -59,6 +62,7 @@ export const PageHeader = ({
       <Flex alignItems="center" gap={{ base: 2, md: 4 }} pb={4}>
         <Image
           src="./images/cowboy-star.png"
+          alt="Cowboy Star"
           width={{ base: '25px', lg: '45px' }}
         />
         <Box

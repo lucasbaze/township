@@ -2,14 +2,12 @@
 
 import {
   Container,
-  SimpleGrid,
   Heading,
   Box,
   Flex,
   Text,
   Link,
   Image,
-  Input,
 } from '@chakra-ui/react';
 import { PhoneIcon, EmailIcon } from '@chakra-ui/icons';
 

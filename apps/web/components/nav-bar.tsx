@@ -75,7 +75,7 @@ export default function WithSubnavigation() {
     <Box boxShadow="2px 2px 12px hsl(0deg 0% 0% / 0.1)">
       <Container maxW={'6xl'}>
         <Flex
-          bg={useColorModeValue('white', 'gray.800')}
+          bg={useColorModeValue('#FFFBF8', 'gray.800')}
           minH={'75px'}
           color={useColorModeValue('gray.500', 'white')}
           py={{ base: 2 }}

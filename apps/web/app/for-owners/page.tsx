@@ -12,9 +12,9 @@ export default function Page(): JSX.Element {
     <main>
       <Container maxW={'6xl'} py={{ base: 12, lg: 16 }} px={8}>
         <PageHeader
-          image1="./images/big-tex.png"
+          image1="/images/big-tex.png"
           image1Alt="Big Tex"
-          image2="./images/oil-man-statue.png"
+          image2="/images/oil-man-statue.png"
           image2Alt="Roughneck"
           label="For Owners"
           title="For Texas Owners"

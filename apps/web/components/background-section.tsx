@@ -1,4 +1,8 @@
-import { Box, Stack, Flex, Image, Heading, Text } from '@chakra-ui/react';
+'use client';
+
+import { Box, Stack, Flex, Heading, Text } from '@chakra-ui/react';
+
+import { Image } from '@chakra-ui/next-js';
 
 export const BackgroundSection = ({
   title,
@@ -22,7 +26,12 @@ export const BackgroundSection = ({
         opacity="40%"
         zIndex={0}
       >
-        <Image width="350px" src="./images/texas-raster-map.png" />
+        <Image
+          alt="Texas Map"
+          height="250"
+          width="250"
+          src="/images/texas-raster-map.png"
+        />
       </Box>
       <Flex
         position="relative"

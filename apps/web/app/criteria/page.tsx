@@ -15,9 +15,9 @@ export default function Page(): JSX.Element {
         px={8}
       >
         <PageHeader
-          image1="./images/solar-farm-helios.jpeg"
+          image1="/images/solar-farm-helios.jpeg"
           image1Alt="Solar Farm Helios"
-          image2="./images/pecos-river-bridge.jpeg"
+          image2="/images/pecos-river-bridge.jpeg"
           image2Alt="Pecos River Bridge"
           label="Criteria"
           title="What we look for"

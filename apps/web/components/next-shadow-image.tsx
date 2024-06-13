@@ -8,11 +8,13 @@ export const NextShadowImage = ({
   alt,
   width,
   withBorder,
+  priority,
 }: {
   src: string;
   alt: string;
   width: ResponsiveObject<string>;
   withBorder?: boolean;
+  priority?: boolean;
 }) => {
   return (
     <Box
@@ -36,6 +38,7 @@ export const NextShadowImage = ({
           height="500"
           src={src}
           alt={alt}
+          priority={priority}
           style={{
             filter: 'blur(20px)',
             transform: 'translateZ(0)',
@@ -45,7 +48,7 @@ export const NextShadowImage = ({
       {withBorder && (
         <Box
           position="absolute"
-          background="white"
+          background="#FFFBF8"
           top="50%"
           left="50%"
           transform="translate(-45%, -45%)"
@@ -61,6 +64,7 @@ export const NextShadowImage = ({
         src={src}
         alt={alt}
         style={{ borderRadius: '2px', filter: 'sepia(0.2)' }}
+        priority={priority}
       />
     </Box>
   );
