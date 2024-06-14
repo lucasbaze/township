@@ -32,7 +32,7 @@ export const ContactUsForm: React.FC = () => {
   const onSubmit = async (data: FormValues) => {
     console.log('Data Values: ', data);
     try {
-      const response = await axios.post('/api/contact-form', data);
+      await axios.post('/api/contact-form', data);
       toast({
         title: 'Form submitted.',
         description: "We've received your form submission.",

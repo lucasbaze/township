@@ -9,7 +9,30 @@ import { Footer } from '../components/footer';
 
 export const metadata: Metadata = {
   title: 'Township Ventures',
-  description: 'Proudly built in Texas',
+  description: 'We buy Texas businesses',
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Township Ventures',
+    description: 'We buy Texas businesses',
+    creator: '@LucasBazemore',
+    images: ['https://township.ventures/og-image.webp'],
+  },
+  openGraph: {
+    title: 'Township Ventures',
+    description: 'We buy Texas businesses',
+    url: 'https://township.ventures',
+    siteName: 'Township Ventures',
+    images: [
+      {
+        url: 'https://township.ventures/og-image.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Man welding',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({

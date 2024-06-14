@@ -39,8 +39,8 @@ const HeroImageCollageGrid = () => (
       transform={{ base: 'translateY(20%)', lg: 'translateY(15%)' }}
     >
       <NextShadowImage
-        src="/images/bitcoin-mining-riot.webp"
-        alt="Riot Bitcoin Mining Facility"
+        src="/images/man-welding.webp"
+        alt="Man Welding"
         width={{ base: '220px', md: '250px', lg: '300px' }}
       />
     </GridItem>
@@ -134,7 +134,7 @@ export default function Page(): JSX.Element {
           />
           <ImageBlock
             src="/images/solar-ranching.webp"
-            alt="San antonio riverwalk"
+            alt="Solar Ranching"
             imageWidth={{ base: '100%', md: '280px' }}
             title="Our Criteria"
             description="We look for Texas businesses that are stable and will be around for a long time."

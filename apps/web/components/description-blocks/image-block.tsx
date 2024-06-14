@@ -1,7 +1,7 @@
 'use client';
 
 import { ResponsiveObject } from '@chakra-ui/styled-system';
-import { Flex, Box, Image, Heading, Text } from '@chakra-ui/react';
+import { Flex, Box, Heading, Text } from '@chakra-ui/react';
 
 import { Link } from '@chakra-ui/next-js';
 
