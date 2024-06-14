@@ -1,4 +1,11 @@
-import { Container, Box, Stack, SimpleGrid } from '@chakra-ui/react';
+import {
+  Container,
+  Box,
+  Stack,
+  Link,
+  Button,
+  SimpleGrid,
+} from '@chakra-ui/react';
 
 import { PageHeader } from '../../components/page-header';
 import { SectionTitle } from '../../components/section-title';
@@ -63,7 +70,14 @@ export default function Page(): JSX.Element {
             description="We focus on city infrastructure, physical health, and education."
           />
         </SimpleGrid>
-        <Box paddingTop={24} paddingBottom={{ base: 24, md: 36 }}>
+        <Box textAlign="center" marginY={16}>
+          <Link href="/brochure">
+            <Button variant="primary" size="md" paddingY="6">
+              Download Brochure
+            </Button>
+          </Link>
+        </Box>
+        <Box paddingBottom={{ base: 24, md: 36 }}>
           <SectionTitle
             title="Core Domains"
             subtitle="Township Ventures is a long-term holding company dedicated to partnering with owners to grow their business for a very long time."

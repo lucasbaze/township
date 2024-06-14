@@ -1,4 +1,11 @@
-import { Image, Container, Box, SimpleGrid } from '@chakra-ui/react';
+import {
+  Image,
+  Container,
+  Box,
+  SimpleGrid,
+  Link,
+  Button,
+} from '@chakra-ui/react';
 
 import { PageHeader } from '../../components/page-header';
 import { SectionTitle } from '../../components/section-title';
@@ -84,6 +91,13 @@ export default function Page(): JSX.Element {
           paddingBottom={{ base: 0 }}
         >
           <GoodwillBlock />
+          <Box textAlign="center">
+            <Link href="/brochure">
+              <Button variant="primary" size="md" paddingY="6">
+                Download Brochure
+              </Button>
+            </Link>
+          </Box>
         </Box>
         <Box
           paddingTop={{ base: 24, md: 12 }}

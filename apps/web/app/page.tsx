@@ -97,7 +97,7 @@ export default function Page(): JSX.Element {
                 build them to last{' '}
                 <span className="highlight blue">Generations</span> */}
               </Heading>
-              <Link href="/brochure.pdf">
+              <Link href="/brochure">
                 <Button variant="primary" size="md" paddingY="6">
                   Download Brochure
                 </Button>
