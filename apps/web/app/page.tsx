@@ -2,6 +2,7 @@ import {
   Stack,
   Box,
   Heading,
+  Image,
   Button,
   Container,
   Grid,
@@ -92,13 +93,12 @@ export default function Page(): JSX.Element {
                 fontSize={{ base: '36px', md: '42px', lg: '60px' }}
               >
                 We buy Texas
-                <Box
-                  as="img"
-                  src="/images/texas-flag.svg"
+                <Image
+                  src="./images/texas-flag-large.svg"
                   display="inline"
-                  width={{ base: '60px', md: '70px', lg: '90px' }}
-                  height={{ base: '28px', md: '30px', lg: '40px' }}
-                  mx="1"
+                  width={{ base: '40px', md: '50px', lg: '70px' }}
+                  height={{ base: '26px', md: '33px', lg: '46px' }}
+                  ml={{ base: 2, md: 4 }}
                   my="-2px"
                 />
                 businesses and build them to last generations.

@@ -6,6 +6,7 @@ import {
   Container,
   SimpleGrid,
   Stack,
+  Image,
   Flex,
   Text,
   Input,
@@ -16,7 +17,6 @@ import {
 import { Link } from '@chakra-ui/next-js';
 import { ReactNode } from 'react';
 import { FaLinkedinIn, FaXTwitter, FaYoutube } from 'react-icons/fa6';
-import { TexasFlag } from './texas-flag';
 import { SocialButton } from './social-button';
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
@@ -139,9 +139,12 @@ export const Footer = () => (
         <Flex justifyContent="center">
           <Box alignItems="center">
             <Flex width="240px" alignItems="center">
-              <Box width="64px" mr="4">
-                <TexasFlag />
-              </Box>
+              <Image
+                width="48px"
+                mr="4"
+                alt="Texas Flag"
+                src="./images/texas-flag-large.svg"
+              />
               <Text fontSize="12px">
                 Proudly built in the greatest country on earth.
               </Text>

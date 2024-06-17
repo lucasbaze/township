@@ -42,31 +42,31 @@ export default function Page(): JSX.Element {
           columns={[1, 1, 2]}
         >
           <IconBlock
-            iconSrc="./images/texas-flag.svg"
+            iconSrc="./images/texas-flag-large.svg"
             iconWidth={{ base: '45px', md: '65px' }}
             title="HQ in Texas"
             description="Rooted in great values, amazing people, and relentless tenacity."
           />
           <IconBlock
-            iconSrc="./images/texas-flag.svg"
+            iconSrc="./images/texas-flag-large.svg"
             iconWidth={{ base: '45px', md: '65px' }}
             title="Min. 10 years old"
             description="Showcasing durable operations."
           />
           <IconBlock
-            iconSrc="./images/texas-flag.svg"
+            iconSrc="./images/texas-flag-large.svg"
             iconWidth={{ base: '45px', md: '65px' }}
             title="Minimum $1M in EBITDA"
             description="Capacity for change and protection from uncertainty."
           />
           <IconBlock
-            iconSrc="./images/texas-flag.svg"
+            iconSrc="./images/texas-flag-large.svg"
             iconWidth={{ base: '45px', md: '65px' }}
             title="Strong Operating Margins"
             description="Capturing the value created for future reinvestment."
           />
           <IconBlock
-            iconSrc="./images/texas-flag.svg"
+            iconSrc="./images/texas-flag-large.svg"
             iconWidth={{ base: '45px', md: '65px' }}
             title="Serving a Core Domain"
             description="We focus on city infrastructure, physical health, and education."
