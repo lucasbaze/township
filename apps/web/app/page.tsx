@@ -14,6 +14,7 @@ import {
 import { BackgroundSection } from '../components/background-section';
 import { SectionTitle } from '../components/section-title';
 import { ImageBlock } from '../components/description-blocks/image-block';
+import { LatestBlogPosts } from '../components/latest-blog-posts';
 
 import { NextShadowImage } from '../components/next-shadow-image';
 
@@ -148,6 +149,10 @@ export default function Page(): JSX.Element {
             buttonHref="/criteria"
           />
         </Stack>
+        <Box paddingTop={24} paddingBottom={16}>
+          <SectionTitle title="Resources & Insights" />
+        </Box>
+        <LatestBlogPosts />
       </Box>
     </main>
   );
