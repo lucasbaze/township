@@ -167,9 +167,17 @@ export default function WithSubnavigation() {
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerBody>
-            <Heading fontSize="3xl" textAlign="center" pt={12} pb={12}>
-              Township Ventures
-            </Heading>
+            <Link
+              href="/"
+              _hover={{
+                textDecoration: 'none',
+              }}
+              onClick={onClose}
+            >
+              <Heading fontSize="3xl" textAlign="center" pt={12} pb={12}>
+                Township Ventures
+              </Heading>
+            </Link>
             <MobileNav onClose={onClose} />
           </DrawerBody>
           <Divider />

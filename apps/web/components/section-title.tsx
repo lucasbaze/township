@@ -1,4 +1,6 @@
-import { Box, Stack, Flex, Image, Heading, Text } from '@chakra-ui/react';
+import { Box, Stack, Flex, Heading, Text } from '@chakra-ui/react';
+
+import Image from 'next/image';
 
 export const SectionTitle = ({
   title,
@@ -15,7 +17,13 @@ export const SectionTitle = ({
     margin="0 auto"
   >
     <Box margin="0 auto">
-      <Image width="55px" src="./images/texas-star.svg" />
+      <Image
+        width="55"
+        height="55"
+        alt="Texas Star"
+        src="./images/texas-star.svg"
+        unoptimized
+      />
     </Box>
     <Flex alignItems="baseline" margin="0 auto" gap={4}>
       <Box width="25px" height="1px" bg="brand.primary" />

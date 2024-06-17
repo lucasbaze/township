@@ -5,8 +5,10 @@ import { NextShadowImage } from './next-shadow-image';
 interface PageHeaderProps {
   image1: string;
   image1Alt: string;
+  image1Blur: string;
   image2: string;
   image2Alt: string;
+  image2Blur: string;
   label: string;
   title: string;
   subtitle: string;
@@ -15,8 +17,10 @@ interface PageHeaderProps {
 export const PageHeader = ({
   image1,
   image1Alt,
+  image1Blur,
   image2,
   image2Alt,
+  image2Blur,
   label,
   title,
   subtitle,
@@ -38,6 +42,8 @@ export const PageHeader = ({
         alt={image1Alt}
         width={{ base: '250px', lg: '350px' }}
         priority
+        placeholder="blur"
+        blurDataURL={image1Blur}
       />
       <Box
         position="absolute"
@@ -51,6 +57,8 @@ export const PageHeader = ({
           width={{ base: '150px', lg: '180px' }}
           withBorder
           priority
+          placeholder="blur"
+          blurDataURL={image2Blur}
         />
       </Box>
     </Box>

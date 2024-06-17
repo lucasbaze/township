@@ -9,12 +9,16 @@ export const NextShadowImage = ({
   width,
   withBorder,
   priority,
+  blurDataURL,
+  placeholder,
 }: {
   src: string;
   alt: string;
   width: ResponsiveObject<string>;
   withBorder?: boolean;
   priority?: boolean;
+  blurDataURL?: string;
+  placeholder?: 'blur';
 }) => {
   return (
     <Box
@@ -43,6 +47,8 @@ export const NextShadowImage = ({
             filter: 'blur(20px)',
             transform: 'translateZ(0)',
           }}
+          placeholder={placeholder}
+          blurDataURL={blurDataURL}
         />
       </Box>
       {withBorder && (
@@ -65,6 +71,8 @@ export const NextShadowImage = ({
         alt={alt}
         style={{ borderRadius: '2px', filter: 'sepia(0.2)' }}
         priority={priority}
+        placeholder={placeholder}
+        blurDataURL={blurDataURL}
       />
     </Box>
   );
