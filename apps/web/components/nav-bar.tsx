@@ -174,34 +174,12 @@ export default function WithSubnavigation() {
               }}
               onClick={onClose}
             >
-              <Heading fontSize="3xl" textAlign="center" pt={12} pb={12}>
+              <Heading fontSize="3xl" textAlign="center" pt={12} pb={6}>
                 Township Ventures
               </Heading>
             </Link>
             <MobileNav onClose={onClose} />
           </DrawerBody>
-          <Divider />
-          <DrawerFooter justifyContent="center">
-            <Box mb={2}>
-              <Text fontWeight={500} mb={4} textAlign="center">
-                Connect with Us
-              </Text>
-              <Stack direction={'row'} spacing={4}>
-                <SocialButton label={'X'} href={'#'}>
-                  <FaXTwitter />
-                </SocialButton>
-                <SocialButton label={'YouTube'} href={'#'}>
-                  <FaLinkedinIn />
-                </SocialButton>
-                <SocialButton label={'Youtube'} href={'#'}>
-                  <FaYoutube />
-                </SocialButton>
-                <SocialButton label={'Spotify'} href={'#'}>
-                  <FaSpotify />
-                </SocialButton>
-              </Stack>
-            </Box>
-          </DrawerFooter>
         </DrawerContent>
       </Drawer>
     </Box>
@@ -242,19 +220,37 @@ const MobileNav = ({ onClose }: { onClose: () => void }) => {
           <MobileNavItem key={navItem.label} {...navItem} />
         </Box>
       ))}
-      <Link href="contact-us" onClick={onClose}>
-        <Button
-          display="block"
-          margin="24px auto"
-          fontSize={'sm'}
-          size="md"
-          borderColor="brand.primary"
-          variant="outline"
-          color="brand.primary"
-        >
-          Contact Us
-        </Button>
-      </Link>
+      <Box pb={6}>
+        <Link href="contact-us" onClick={onClose}>
+          <Button
+            display="block"
+            margin="24px auto"
+            fontSize={'sm'}
+            size="md"
+            borderColor="brand.primary"
+            variant="outline"
+            color="brand.primary"
+          >
+            Contact Us
+          </Button>
+        </Link>
+      </Box>
+      <Box mb={2}>
+        <Stack direction={'row'} spacing={4} justifyContent="center">
+          <SocialButton label={'X'} href={'#'}>
+            <FaXTwitter />
+          </SocialButton>
+          <SocialButton label={'YouTube'} href={'#'}>
+            <FaLinkedinIn />
+          </SocialButton>
+          <SocialButton label={'Youtube'} href={'#'}>
+            <FaYoutube />
+          </SocialButton>
+          <SocialButton label={'Spotify'} href={'#'}>
+            <FaSpotify />
+          </SocialButton>
+        </Stack>
+      </Box>
     </Box>
   );
 };
@@ -263,7 +259,7 @@ const MobileNavItem = ({ label, href }: NavItem) => {
   const pathname = usePathname();
   return (
     <Flex
-      py={6}
+      py={4}
       as={Link}
       justifyContent="center"
       href={href ?? '#'}
@@ -272,7 +268,7 @@ const MobileNavItem = ({ label, href }: NavItem) => {
       }}
     >
       <Text
-        fontSize="xl"
+        fontSize="lg"
         color={
           pathname == href
             ? 'brand.primary'

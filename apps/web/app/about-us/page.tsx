@@ -1,6 +1,6 @@
 'use client';
 
-import { Container, Box, Flex, Stack, Text } from '@chakra-ui/react';
+import { Container, Box, Flex, Stack, Text, Image } from '@chakra-ui/react';
 
 import { PageHeader } from '../../components/page-header';
 import { SectionTitle } from '../../components/section-title';
@@ -29,6 +29,15 @@ const TeamBlocks = () => (
         <>
           <SocialButton noBg label={'X'} href={'https://x.com/LucasBazemore'}>
             <FaXTwitter />
+          </SocialButton>
+          <SocialButton
+            noBg
+            label={'Nostr'}
+            href={
+              'https://primal.net/p/npub1qhx2q9jmhq5dt0wrn25era2z6jhw5es3r8p0vpytkm9sqv3fhptqktek68'
+            }
+          >
+            <Image src="./images/nostr-icon.png" />
           </SocialButton>
           <SocialButton
             noBg
@@ -123,6 +132,15 @@ const TeamBlocks = () => (
           </SocialButton>
           <SocialButton
             noBg
+            label={'Nostr'}
+            href={
+              'https://primal.net/p/npub1e4s384wx4v8wq4x6kjqgsx60yfarh4vaf4nlcyud7xhljpzxlgmsn9fyx0'
+            }
+          >
+            <Image src="./images/nostr-icon.png" />
+          </SocialButton>
+          <SocialButton
+            noBg
             label={'LinkedIn'}
             href={'https://www.linkedin.com/in/roberto-gargurevich/'}
           >
@@ -154,6 +172,15 @@ const TeamBlocks = () => (
         <>
           <SocialButton noBg label={'X'} href={'https://x.com/Bajmanlou'}>
             <FaXTwitter />
+          </SocialButton>
+          <SocialButton
+            noBg
+            label={'Nostr'}
+            href={
+              'https://primal.net/p/npub1u87arhxu00xnh99jx5f3jkfwcv0amkeynu95vpancfyxs0k6069skk09qw'
+            }
+          >
+            <Image src="./images/nostr-icon.png" />
           </SocialButton>
         </>
       }

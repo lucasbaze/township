@@ -21,7 +21,7 @@ export const SectionTitle = ({
         width="55"
         height="55"
         alt="Texas Star"
-        src="./images/texas-star.svg"
+        src="./images/texas-star.webp"
         unoptimized
       />
     </Box>
