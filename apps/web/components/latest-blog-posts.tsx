@@ -44,13 +44,12 @@ export const LatestBlogPosts = () => {
     <SimpleGrid
       columns={{ base: 1, md: 2, lg: 3 }}
       spacing={10}
-      alignItems={{ md: 'center' }}
       maxWidth={{ base: '300px', md: '650px', lg: '850px' }}
       margin={{ base: '0 auto' }}
     >
       {posts &&
         posts.map((post) => (
-          <Link href={post.url} target="_blank">
+          <Link href={post.url} target="_blank" key={post.url}>
             <Card
               direction={{ base: 'column' }}
               overflow="hidden"
