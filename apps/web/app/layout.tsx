@@ -1,11 +1,14 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/react';
+
 import { Providers } from './providers';
 import { poppins } from '../components/fonts';
 
 import NavBar from '../components/nav-bar';
 import { Footer } from '../components/footer';
+import { Clarity } from '../components/analytics/clarity';
+import { GoogleAnalytics } from '../components/analytics/google-analytics';
 
 export const metadata: Metadata = {
   title: 'Township Ventures',
@@ -42,15 +45,7 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <Script id="clarity">
-        {`
-					(function(c,l,a,r,i,t,y){
-							c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-							t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-							y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-					})(window, document, "clarity", "script", "mrklr8g3bl");
-				`}
-      </Script>
+      <GoogleAnalytics />
       <body
         className={poppins.className}
         style={{ backgroundColor: '#FFFBF8' }}
@@ -60,6 +55,8 @@ export default function RootLayout({
           {children}
           <Footer />
         </Providers>
+        <Clarity />
+        <Analytics />
       </body>
     </html>
   );
