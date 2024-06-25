@@ -121,7 +121,7 @@ const TeamBlocks = () => (
       }
     />
     <TeamBlock
-      src="./images/roberto-headshot.webp"
+      src="./images/roberto-headshot.jpg"
       alt="Roberto Gargurevich Headshot"
       imageWidth={{ base: '50%', md: '100%' }}
       title="Roberto Gargurevich"
@@ -150,13 +150,14 @@ const TeamBlocks = () => (
       }
       description={
         <Text fontSize={{ base: 'sm', md: 'md' }}>
-          My focus is on the financial strategy and understanding of your
-          business and how we can create repeatable, measurable success.
+          My focus is on strategy, performance, and vision, and how we can
+          maneuver through moving waters to create repeatable, measurable
+          success.
           <br />
           <br />
           With over 6 years in business strategy and intelligence for a
-          Berkshire Hathaway company, I’m confident we can build generational
-          success.
+          Berkshire Hathaway company, I’m confident we can build businesses that
+          last generations.
           <br />
           <br />
           Texas A&M alumni. Industrial Engineering.
