@@ -18,6 +18,9 @@ import {
 } from '@chakra-ui/react';
 
 import { createClient } from '../../utils/supabase/server';
+import { convertToUSD, satsToBTC } from '../../utils';
+
+import { LogoutButton } from '../../components/logout-button';
 
 export default async function PrivatePage() {
   const supabase = createClient();
@@ -46,9 +49,9 @@ export default async function PrivatePage() {
   const totalAccountBalance =
     accounts.reduce((acc, curr) => curr.btc_balance + acc, 0) / 100000000;
 
-  const totalAccountBalanceInUSD = (
-    Math.round(btcData.RAW.PRICE * totalAccountBalance * 100) / 100
-  ).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+  const totalAccountBalanceInUSD = convertToUSD(
+    btcData.RAW.PRICE * totalAccountBalance,
+  );
 
   return (
     <main>
@@ -59,6 +62,7 @@ export default async function PrivatePage() {
         pb={{ base: 24, lg: 32 }}
         px={8}
       >
+        <LogoutButton />
         <Heading>Welcome back!</Heading>
         <Stat>
           <StatLabel>Total BTC</StatLabel>
@@ -67,30 +71,28 @@ export default async function PrivatePage() {
         </Stat>
         <TableContainer>
           <Table variant="simple">
-            <TableCaption>Imperial to metric conversion factors</TableCaption>
+            {/* <TableCaption>Imperial to metric conversion factors</TableCaption> */}
             <Thead>
               <Tr>
-                <Th>To convert</Th>
-                <Th>into</Th>
-                <Th isNumeric>multiply by</Th>
+                <Th>Account</Th>
+                <Th isNumeric>Bitcoin</Th>
+                <Th isNumeric>USD value</Th>
               </Tr>
             </Thead>
             <Tbody>
-              <Tr>
-                <Td>inches</Td>
-                <Td>millimetres (mm)</Td>
-                <Td isNumeric>25.4</Td>
-              </Tr>
-              <Tr>
-                <Td>feet</Td>
-                <Td>centimetres (cm)</Td>
-                <Td isNumeric>30.48</Td>
-              </Tr>
-              <Tr>
-                <Td>yards</Td>
-                <Td>metres (m)</Td>
-                <Td isNumeric>0.91444</Td>
-              </Tr>
+              {accounts.map((account) => (
+                <Tr>
+                  <Td>{account.account_name}</Td>
+                  <Td isNumeric>
+                    {account.btc_balance.toLocaleString('en-US')}
+                  </Td>
+                  <Td isNumeric>
+                    {convertToUSD(
+                      satsToBTC(account.btc_balance * btcData.RAW.PRICE),
+                    )}
+                  </Td>
+                </Tr>
+              ))}
             </Tbody>
             {/* <Tfoot>
               <Tr>
