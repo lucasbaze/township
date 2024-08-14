@@ -4,12 +4,15 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
+      "env": ["NEXT_PUBLIC_SUPABASE_ANON_KEY", "NEXT_PUBLIC_SUPABASE_URL"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "lint": {
+      "env": ["NEXT_PUBLIC_SUPABASE_ANON_KEY", "NEXT_PUBLIC_SUPABASE_URL"],
       "dependsOn": ["^lint"]
     },
     "dev": {
+      "env": ["NEXT_PUBLIC_SUPABASE_ANON_KEY", "NEXT_PUBLIC_SUPABASE_URL"],
       "cache": false,
       "persistent": true
     }
