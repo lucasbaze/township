@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@chakra-ui/react';
-import { createClient } from '../utils/supabase/client';
+import { createClient } from '../../../utils/supabase/client';
 
 export const LogoutButton = () => {
   const router = useRouter();
