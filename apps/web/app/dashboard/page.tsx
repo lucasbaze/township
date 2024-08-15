@@ -17,10 +17,12 @@ export default async function PrivatePage() {
   const response = await fetch(
     'https://min-api.cryptocompare.com/data/generateAvg?fsym=BTC&tsym=USD&e=coinbase',
   );
-  const btcData = await response.json();
+  let btcData = await response.json();
 
   if (!response.ok) {
-    throw new Error(`Error: ${btcData}`);
+    console.error(`Error: ${btcData}`);
+    // TODO: Handle this error properly
+    btcData = { RAW: { PRICE: 0 } };
   }
 
   return (
@@ -32,10 +34,7 @@ export default async function PrivatePage() {
         pb={{ base: 24, lg: 32 }}
         px={8}
       >
-        <Heading>Welcome back!</Heading>
-
         <AccountTable userId={data.user.id} btcData={btcData} />
-
         <LogoutButton />
       </Container>
     </main>

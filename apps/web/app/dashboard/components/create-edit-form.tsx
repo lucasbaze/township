@@ -15,8 +15,7 @@ import {
   ModalCloseButton,
   useDisclosure,
 } from '@chakra-ui/react';
-import crypto from 'crypto-js';
-import { createClient } from '../../../utils/supabase/client';
+import { encryptClientValue } from '../../../lib/security/account-values';
 
 interface AccountFormProps {
   account?: {
@@ -26,7 +25,7 @@ interface AccountFormProps {
   };
   btcData: any;
   userId: string;
-  onAccountSaved?: () => void;
+  onAccountSaved: () => void;
 }
 
 export const AccountForm: React.FC<AccountFormProps> = ({
@@ -39,39 +38,36 @@ export const AccountForm: React.FC<AccountFormProps> = ({
   const [newAccountName, setNewAccountName] = useState('');
   const [newAccountBalance, setNewAccountBalance] = useState(0);
 
-  const supabase = createClient();
-
   const handleSave = async () => {
-    const encryptedName = crypto.AES.encrypt(
-      newAccountName,
-      'client_secret',
-    ).toString();
-    const encryptedBalance = crypto.AES.encrypt(
-      newAccountBalance.toString(),
-      'client_secret',
-    ).toString();
+    const encryptedName = encryptClientValue(newAccountName);
+    const encryptedBalance = encryptClientValue(newAccountBalance.toString());
 
-    if (account) {
-      // Update existing account
-      const { error } = await supabase
-        .from('btc_accounts')
-        .update({ account_name: encryptedName, btc_balance: encryptedBalance })
-        .eq('id', account.id);
+    const action = account ? 'update' : 'insert';
+    const payload = {
+      action,
+      accountId: account?.id,
+      userId,
+      account_name: encryptedName,
+      btc_balance: encryptedBalance,
+    };
 
-      if (error) throw new Error(error.message);
+    const response = await fetch('/api/btc-accounts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (!response.ok) {
+      const { error } = await response.json();
+      console.error('Failed:', error);
     } else {
-      // Create new account
-      const { error } = await supabase.from('btc_accounts').insert({
-        user_id: userId,
-        account_name: encryptedName,
-        btc_balance: encryptedBalance,
-      });
-
-      if (error) throw new Error(error.message);
+      console.log('Success');
     }
 
     onClose();
-    // onAccountSaved(); // Callback to refresh the data on the server-side component
+    onAccountSaved(); // Callback to refresh the data on the server-side component
   };
 
   const handleOpen = () => {
@@ -85,7 +81,7 @@ export const AccountForm: React.FC<AccountFormProps> = ({
   return (
     <>
       <Button colorScheme="blue" onClick={handleOpen}>
-        {account ? 'Edit Account' : 'Add New Account'}
+        {account ? 'Edit' : 'Log New Account'}
       </Button>
 
       <Modal isOpen={isOpen} onClose={onClose}>
