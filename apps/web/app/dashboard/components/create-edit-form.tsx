@@ -37,8 +37,11 @@ export const AccountForm: React.FC<AccountFormProps> = ({
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [newAccountName, setNewAccountName] = useState('');
   const [newAccountBalance, setNewAccountBalance] = useState(0);
+  const [saving, setSaving] = useState(false);
+  const [deleting, setDeleting] = useState(false);
 
   const handleSave = async () => {
+    setSaving(true);
     const encryptedName = encryptClientValue(newAccountName);
     const encryptedBalance = encryptClientValue(newAccountBalance.toString());
 
@@ -66,6 +69,27 @@ export const AccountForm: React.FC<AccountFormProps> = ({
       console.log('Success');
     }
 
+    setSaving(false);
+    onClose();
+    onAccountSaved(); // Callback to refresh the data on the server-side component
+  };
+
+  const handleDelete = async () => {
+    if (!account || !account.id) return;
+    setDeleting(true);
+
+    const response = await fetch(`/api/btc-accounts?id=${account.id}`, {
+      method: 'DELETE',
+    });
+
+    if (!response.ok) {
+      const { error } = await response.json();
+      console.error('Failed to delete:', error);
+    } else {
+      console.log('Delete success');
+    }
+
+    setDeleting(false);
     onClose();
     onAccountSaved(); // Callback to refresh the data on the server-side component
   };
@@ -76,6 +100,18 @@ export const AccountForm: React.FC<AccountFormProps> = ({
       setNewAccountBalance(account.btcBalance);
     }
     onOpen();
+  };
+
+  const formatNumberWithCommas = (value: number) => {
+    return value.toLocaleString('en-US');
+  };
+
+  const handleBalanceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const rawValue = e.target.value.replace(/,/g, ''); // Remove commas
+    const numericValue = parseInt(rawValue, 10) || 0;
+    if (!isNaN(numericValue)) {
+      setNewAccountBalance(numericValue);
+    }
   };
 
   return (
@@ -99,19 +135,27 @@ export const AccountForm: React.FC<AccountFormProps> = ({
               />
             </FormControl>
             <FormControl id="btc-balance" mb={4} isRequired>
-              <FormLabel>Bitcoin Balance</FormLabel>
+              <FormLabel>Bitcoin Balance (in sats)</FormLabel>
               <Input
-                value={newAccountBalance}
-                onChange={(e) =>
-                  setNewAccountBalance(parseInt(e.target.value, 10))
-                }
-                type="number"
+                value={formatNumberWithCommas(newAccountBalance)}
+                onChange={handleBalanceChange}
+                type="text"
                 placeholder="Enter BTC balance"
               />
             </FormControl>
           </ModalBody>
           <ModalFooter>
-            <Button colorScheme="blue" onClick={handleSave}>
+            {account && (
+              <Button
+                colorScheme="red"
+                mr={3}
+                onClick={handleDelete}
+                isLoading={deleting}
+              >
+                Delete
+              </Button>
+            )}
+            <Button colorScheme="blue" onClick={handleSave} isLoading={saving}>
               Save
             </Button>
           </ModalFooter>

@@ -17,7 +17,7 @@ import {
   StatHelpText,
   Spinner,
 } from '@chakra-ui/react';
-import { convertToUSD, satsToBTC } from '../../../utils';
+import { convertToUSD, satsToBTC, formatNumber } from '../../../utils';
 import { AccountForm } from './create-edit-form';
 import { RawAccount, Account } from '../../../lib/types/btc-accounts';
 import { decryptClientValue } from '../../../lib/security/account-values';
@@ -70,7 +70,8 @@ export const AccountTable: React.FC<AccountTableProps> = ({
       .catch(console.error);
   };
 
-  // const totalAccountBalance = accounts?.reduce(account => );
+  const totalAccountBalance =
+    accounts?.reduce((acc, curr) => curr.btcBalance + acc, 0) || 0;
 
   if (!accounts) {
     return <Spinner />;
@@ -81,13 +82,12 @@ export const AccountTable: React.FC<AccountTableProps> = ({
       <Box display="flex" flexDir="column" alignItems="center" mb={12}>
         <Stat>
           <StatLabel>Total BTC</StatLabel>
-          <StatNumber>
-            ₿ {/* Add logic to calculate and display total BTC here */}
-          </StatNumber>
+          <StatNumber>₿ {satsToBTC(totalAccountBalance)}</StatNumber>
           <StatHelpText>
             {convertToUSD(
-              btcData.RAW
-                .PRICE /* Add logic to calculate total balance in USD here */,
+              satsToBTC(totalAccountBalance) *
+                btcData.RAW
+                  .PRICE /* Add logic to calculate total balance in USD here */,
             )}
           </StatHelpText>
         </Stat>
@@ -129,7 +129,7 @@ export const AccountTable: React.FC<AccountTableProps> = ({
                     100,000,000
                   </Td>
                   <Td isNumeric color="gray.500">
-                    {convertToUSD(1 * btcData.RAW.PRICE)}
+                    {convertToUSD(totalAccountBalance * btcData.RAW.PRICE)}
                   </Td>
                   <Td>
                     Edit
@@ -155,25 +155,27 @@ export const AccountTable: React.FC<AccountTableProps> = ({
               </Tr>
             </Thead>
             <Tbody>
-              {accounts.map((account) => (
-                <Tr key={account.id}>
-                  <Td>{account.accountName}</Td>
-                  <Td isNumeric>{account.btcBalance}</Td>
-                  <Td isNumeric>
-                    {convertToUSD(
-                      satsToBTC(account.btcBalance) * btcData.RAW.PRICE,
-                    )}
-                  </Td>
-                  <Td>
-                    <AccountForm
-                      account={account}
-                      btcData={btcData}
-                      userId={userId}
-                      onAccountSaved={onAccountSaved}
-                    />
-                  </Td>
-                </Tr>
-              ))}
+              {accounts
+                .sort((a, b) => b.btcBalance - a.btcBalance)
+                .map((account) => (
+                  <Tr key={account.id}>
+                    <Td>{account.accountName}</Td>
+                    <Td isNumeric>{formatNumber(account.btcBalance)}</Td>
+                    <Td isNumeric>
+                      {convertToUSD(
+                        satsToBTC(account.btcBalance) * btcData.RAW.PRICE,
+                      )}
+                    </Td>
+                    <Td>
+                      <AccountForm
+                        account={account}
+                        btcData={btcData}
+                        userId={userId}
+                        onAccountSaved={onAccountSaved}
+                      />
+                    </Td>
+                  </Tr>
+                ))}
             </Tbody>
           </Table>
         )}
