@@ -146,6 +146,7 @@ export default function WithSubnavigation() {
                 fontSize={'sm'}
                 size="sm"
                 borderColor="brand.primary"
+                boxShadow="2px 2px 12px hsl(0deg 0% 0% / 0.2)"
                 variant="outline"
                 color="brand.primary"
               >
@@ -229,6 +230,7 @@ const MobileNav = ({ onClose }: { onClose: () => void }) => {
             size="md"
             borderColor="brand.primary"
             variant="outline"
+            boxShadow="2px 2px 12px hsl(0deg 0% 0% / 0.2)"
             color="brand.primary"
           >
             Contact Us

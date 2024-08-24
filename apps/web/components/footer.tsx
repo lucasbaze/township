@@ -139,7 +139,7 @@ export const Footer = () => {
                     </FormErrorMessage>
                   </FormControl>
                   <Button
-                    variant={'outline'}
+                    variant="invertedOutline"
                     isLoading={isSubmitting}
                     type="submit"
                   >

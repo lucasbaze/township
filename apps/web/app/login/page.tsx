@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useTransition } from 'react';
 import {
   Button,
   FormControl,
@@ -11,6 +13,18 @@ import {
 import { login } from './actions';
 
 const LoginPage: React.FC = () => {
+  const [isPending, startTransition] = useTransition();
+
+  const onLogin = async (formData: FormData) => {
+    startTransition(async () => {
+      try {
+        await login(formData);
+      } catch (error) {
+        console.error('Login failed:', error);
+      }
+    });
+  };
+
   return (
     <Box
       maxW="md"
@@ -41,7 +55,12 @@ const LoginPage: React.FC = () => {
         </FormControl>
 
         <Box display="flex" alignItems="center" mb={6}>
-          <Button type="submit" formAction={login} variant="primary">
+          <Button
+            type="submit"
+            formAction={onLogin}
+            variant="primary"
+            isLoading={isPending}
+          >
             Log in
           </Button>
         </Box>

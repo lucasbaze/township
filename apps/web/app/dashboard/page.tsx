@@ -1,6 +1,6 @@
 import React from 'react';
 import { redirect } from 'next/navigation';
-import { Container, Heading } from '@chakra-ui/react';
+import { Container, Heading, Divider } from '@chakra-ui/react';
 
 import { createClient } from '../../utils/supabase/server';
 import { LogoutButton } from './components/logout-button';
@@ -35,6 +35,7 @@ export default async function PrivatePage() {
         px={8}
       >
         <AccountTable userId={data.user.id} btcData={btcData} />
+        <Divider mb={12} />
         <LogoutButton />
       </Container>
     </main>

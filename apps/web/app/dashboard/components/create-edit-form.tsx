@@ -15,6 +15,7 @@ import {
   ModalCloseButton,
   useDisclosure,
 } from '@chakra-ui/react';
+import { EditIcon } from '@chakra-ui/icons';
 import { encryptClientValue } from '../../../lib/security/account-values';
 
 interface AccountFormProps {
@@ -116,8 +117,8 @@ export const AccountForm: React.FC<AccountFormProps> = ({
 
   return (
     <>
-      <Button colorScheme="blue" onClick={handleOpen}>
-        {account ? 'Edit' : 'Log New Account'}
+      <Button colorScheme="orange" onClick={handleOpen} variant="ghost">
+        {account ? <EditIcon /> : 'Log New Account'}
       </Button>
 
       <Modal isOpen={isOpen} onClose={onClose}>

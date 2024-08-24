@@ -22,8 +22,6 @@ const theme = extendTheme({
         padding: '2px 8px',
         fontWeight: '600',
         borderRadius: '2px',
-        color: 'white',
-        boxShadow: '2px 2px 12px hsl(0deg 0% 0% / 0.2)',
       },
       sizes: {
         md: {
@@ -36,10 +34,16 @@ const theme = extendTheme({
       variants: {
         primary: {
           backgroundColor: 'brand.primary',
+          color: 'white',
+          boxShadow: '2px 2px 12px hsl(0deg 0% 0% / 0.2)',
         },
-        outline: {
+        invertedOutline: {
+          borderColor: 'white',
           color: 'white',
           minWidth: 'unset',
+        },
+        outline: {
+          borderColor: 'brand.primary',
         },
       },
     },
