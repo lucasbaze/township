@@ -137,7 +137,7 @@ export const AccountForm: React.FC<AccountFormProps> = ({
               <Input
                 value={newAccountName}
                 onChange={(e) => setNewAccountName(e.target.value)}
-                placeholder="Enter account name"
+                placeholder="Account name (e.g. Coinbase, Trezor)"
               />
             </FormControl>
             <FormControl id="btc-balance" mb={4} isRequired>
@@ -146,7 +146,7 @@ export const AccountForm: React.FC<AccountFormProps> = ({
                 value={newAccountBalance}
                 onChange={handleBalanceChange}
                 type="text"
-                placeholder="Enter BTC balance (e.g., 0.12345)"
+                placeholder="Bitcoin balance (e.g. 0.052345)"
               />
             </FormControl>
           </ModalBody>
