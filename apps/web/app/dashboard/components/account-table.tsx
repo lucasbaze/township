@@ -79,7 +79,7 @@ export const AccountTable: React.FC<AccountTableProps> = ({
   return (
     <>
       <Box display="flex" flexDir="column" alignItems="center" mb={12}>
-        <Box mb={12} alignItems="center">
+        <Box mb={8} alignItems="center">
           <Text fontSize="14px" textAlign="center">
             TOTAL BTC
           </Text>

@@ -34,6 +34,7 @@ const LoginPage: React.FC = () => {
       borderWidth={1}
       borderRadius="lg"
       boxShadow="lg"
+      bgColor="white"
     >
       <Heading as="h1" size="lg" textAlign="center" mb={6}>
         Dashboard Login
