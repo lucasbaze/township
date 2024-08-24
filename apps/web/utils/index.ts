@@ -11,5 +11,9 @@ export const satsToBTC = (value: number): number => {
   return value / SATS_IN_BTC;
 };
 
+export const BTCtoSats = (value: number): number => {
+  return value * SATS_IN_BTC;
+};
+
 export const formatNumber = (value: number): string =>
   value.toLocaleString('en-US');

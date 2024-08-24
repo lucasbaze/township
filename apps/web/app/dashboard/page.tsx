@@ -1,6 +1,6 @@
 import React from 'react';
 import { redirect } from 'next/navigation';
-import { Container, Heading, Divider } from '@chakra-ui/react';
+import { Container, Divider } from '@chakra-ui/react';
 
 import { createClient } from '../../utils/supabase/server';
 import { LogoutButton } from './components/logout-button';

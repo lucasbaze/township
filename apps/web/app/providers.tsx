@@ -24,6 +24,10 @@ const theme = extendTheme({
         borderRadius: '2px',
       },
       sizes: {
+        sm: {
+          px: '4',
+          py: '4',
+        },
         md: {
           px: '8',
         },
@@ -44,6 +48,12 @@ const theme = extendTheme({
         },
         outline: {
           borderColor: 'brand.primary',
+        },
+        smallPrimary: {
+          backgroundColor: 'brand.primary',
+          fontWeight: '300',
+          color: 'white',
+          boxShadow: '2px 2px 12px hsl(0deg 0% 0% / 0.2)',
         },
       },
     },

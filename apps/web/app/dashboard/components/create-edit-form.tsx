@@ -17,6 +17,8 @@ import {
 } from '@chakra-ui/react';
 import { EditIcon } from '@chakra-ui/icons';
 import { encryptClientValue } from '../../../lib/security/account-values';
+import { formatNumberWithCommas } from '../../../lib/ui-utils/formatting';
+import { satsToBTC, BTCtoSats } from '../../../utils';
 
 interface AccountFormProps {
   account?: {
@@ -37,14 +39,17 @@ export const AccountForm: React.FC<AccountFormProps> = ({
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [newAccountName, setNewAccountName] = useState('');
-  const [newAccountBalance, setNewAccountBalance] = useState(0);
+  const [newAccountBalance, setNewAccountBalance] = useState('');
   const [saving, setSaving] = useState(false);
   const [deleting, setDeleting] = useState(false);
 
   const handleSave = async () => {
     setSaving(true);
     const encryptedName = encryptClientValue(newAccountName);
-    const encryptedBalance = encryptClientValue(newAccountBalance.toString());
+    const satoshis = Math.round(
+      parseFloat(newAccountBalance) * 100000000,
+    ).toString();
+    const encryptedBalance = encryptClientValue(satoshis);
 
     const action = account ? 'update' : 'insert';
     const payload = {
@@ -98,30 +103,30 @@ export const AccountForm: React.FC<AccountFormProps> = ({
   const handleOpen = () => {
     if (account) {
       setNewAccountName(account.accountName);
-      setNewAccountBalance(account.btcBalance);
+      setNewAccountBalance(satsToBTC(account.btcBalance).toString());
     }
     onOpen();
   };
 
-  const formatNumberWithCommas = (value: number) => {
-    return value.toLocaleString('en-US');
-  };
-
   const handleBalanceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const rawValue = e.target.value.replace(/,/g, ''); // Remove commas
-    const numericValue = parseInt(rawValue, 10) || 0;
-    if (!isNaN(numericValue)) {
-      setNewAccountBalance(numericValue);
+    const value = e.target.value;
+    // Allow only numbers and one decimal point
+    if (/^\d*\.?\d*$/.test(value)) {
+      setNewAccountBalance(value);
     }
   };
 
   return (
     <>
-      <Button colorScheme="orange" onClick={handleOpen} variant="ghost">
-        {account ? <EditIcon /> : 'Log New Account'}
+      <Button
+        onClick={handleOpen}
+        variant={account ? 'ghost' : 'smallPrimary'}
+        size="sm"
+      >
+        {account ? <EditIcon /> : 'New Account'}
       </Button>
 
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal isOpen={isOpen} onClose={onClose} size="sm">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>{account ? 'Edit Account' : 'New Account'}</ModalHeader>
@@ -136,12 +141,12 @@ export const AccountForm: React.FC<AccountFormProps> = ({
               />
             </FormControl>
             <FormControl id="btc-balance" mb={4} isRequired>
-              <FormLabel>Bitcoin Balance (in sats)</FormLabel>
+              <FormLabel>Bitcoin Balance</FormLabel>
               <Input
-                value={formatNumberWithCommas(newAccountBalance)}
+                value={newAccountBalance}
                 onChange={handleBalanceChange}
                 type="text"
-                placeholder="Enter BTC balance"
+                placeholder="Enter BTC balance (e.g., 0.12345)"
               />
             </FormControl>
           </ModalBody>

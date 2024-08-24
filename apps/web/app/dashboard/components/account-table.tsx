@@ -3,28 +3,23 @@
 import React, { useEffect, useState } from 'react';
 import {
   Box,
-  Table,
-  TableContainer,
-  Th,
-  Tr,
-  Td,
-  Thead,
-  Tbody,
   Card,
   CardBody,
   Text,
   Flex,
-  Stat,
-  StatLabel,
-  StatNumber,
-  StatHelpText,
   Spinner,
+  Tooltip,
   VStack,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
 } from '@chakra-ui/react';
+import { InfoOutlineIcon } from '@chakra-ui/icons';
 import { convertToUSD, satsToBTC, formatNumber } from '../../../utils';
 import { AccountForm } from './create-edit-form';
 import { RawAccount, Account } from '../../../lib/types/btc-accounts';
 import { decryptClientValue } from '../../../lib/security/account-values';
+import { formatNumberWithCommas } from '../../../lib/ui-utils/formatting';
 
 interface AccountTableProps {
   userId: string;
@@ -84,72 +79,85 @@ export const AccountTable: React.FC<AccountTableProps> = ({
   return (
     <>
       <Box display="flex" flexDir="column" alignItems="center" mb={12}>
-        <Stat>
-          <StatLabel>Total BTC</StatLabel>
-          <StatNumber>₿ {satsToBTC(totalAccountBalance)}</StatNumber>
-          <StatHelpText>
+        <Box mb={12} alignItems="center">
+          <Text fontSize="14px" textAlign="center">
+            TOTAL BTC
+          </Text>
+          <Text fontSize="36px" fontWeight="medium" textAlign="center">
+            ₿ {formatNumberWithCommas(totalAccountBalance)}
+          </Text>
+          <Text fontSize="14px" textAlign="center">
+            <i>{satsToBTC(totalAccountBalance)} BTC</i>
+            <Popover>
+              <PopoverTrigger>
+                <InfoOutlineIcon ml={2} transform="translateY(-1px)" />
+              </PopoverTrigger>
+              <PopoverContent>1 BTC = ₿100,000,000</PopoverContent>
+            </Popover>
+          </Text>
+        </Box>
+        <Box>
+          <Text fontSize="24px" fontWeight="medium">
             {convertToUSD(
               satsToBTC(totalAccountBalance) *
                 btcData.RAW
                   .PRICE /* Add logic to calculate total balance in USD here */,
             )}
-          </StatHelpText>
-        </Stat>
+          </Text>
+          <Text>
+            <i>1 BTC = ${btcData.RAW.PRICE}</i>
+          </Text>
+        </Box>
       </Box>
-      <Box display="flex">
-        <Text fontSize="lg" flex="1" fontWeight="bold">
-          Accounts
-        </Text>
+      <Box display="flex" mb={6}>
+        <Box flex="1">
+          <Text fontSize="lg" flex="1" fontWeight="medium">
+            ACCOUNTS
+          </Text>
+          <Text fontSize="12px">Locations you have BTC</Text>
+        </Box>
         <AccountForm
           btcData={btcData}
           userId={userId}
           onAccountSaved={onAccountSaved}
         />
       </Box>
-      <VStack align="stretch">
+      <VStack align="stretch" gap={4}>
         {accounts
           .sort((a, b) => b.btcBalance - a.btcBalance)
           .map((account) => (
             <Card key={account.id}>
-              <CardBody>
-                <Flex>
-                  <Box>
-                    <Text fontSize="16px" fontWeight="bold">
-                      {account.accountName}
+              <CardBody p={4} pb={6}>
+                <Text mb={6}>{account.accountName}</Text>
+                <Flex gap={12}>
+                  <Box flex={1}>
+                    <Text fontSize="12px">BITCOIN</Text>
+                    <Text fontSize="22px">
+                      ₿{formatNumber(account.btcBalance)}
                     </Text>
-                    <Text>{formatNumber(account.btcBalance)}</Text>
+                    <Text fontSize="10px">
+                      <i>{satsToBTC(account.btcBalance)} Bitcoin</i>
+                    </Text>
+                  </Box>
+                  <Box flex={1}>
+                    <Text fontSize="14px">USD</Text>
                     <Text>
                       {convertToUSD(
                         satsToBTC(account.btcBalance) * btcData.RAW.PRICE,
                       )}
                     </Text>
                   </Box>
+                </Flex>
+                <Box position="absolute" top={2} right={2}>
                   <AccountForm
                     account={account}
                     btcData={btcData}
                     userId={userId}
                     onAccountSaved={onAccountSaved}
                   />
-                </Flex>
+                </Box>
               </CardBody>
             </Card>
-            // <Tr key={account.id}>
-            //   <Td>{account.accountName}</Td>
-            //   <Td isNumeric>{formatNumber(account.btcBalance)}</Td>
-            //   <Td isNumeric>
-            //     {convertToUSD(
-            //       satsToBTC(account.btcBalance) * btcData.RAW.PRICE,
-            //     )}
-            //   </Td>
-            //   <Td>
-            //     <AccountForm
-            //       account={account}
-            //       btcData={btcData}
-            //       userId={userId}
-            //       onAccountSaved={onAccountSaved}
-            //     />
-            //   </Td>
-            // </Tr>
           ))}
       </VStack>
     </>
