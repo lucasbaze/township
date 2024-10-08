@@ -201,6 +201,68 @@ const TeamBlocks = () => (
   </>
 );
 
+const AdvisorBlocks = () => (
+  <>
+    <TeamBlock
+      src="./images/tony-ludlow.jpg"
+      alt="Anthony Ludlow Headshot"
+      imageWidth={{ base: '50%', md: '100%' }}
+      title="Anthony Ludlow"
+      socials={
+        <>
+          <SocialButton
+            noBg
+            label={'Home'}
+            href={'https://baymarkpartners.com/about/our-team/'}
+          >
+            <FaHouse />
+          </SocialButton>
+        </>
+      }
+      description={
+        <Text fontSize={{ base: 'sm', md: 'md' }}>
+          Over the past 19 years Mr. Ludlow has focused on acquiring, growing,
+          and managing various public and private companies. During the past ten
+          years he has been involved in more than 15 transactions.
+          <br />
+          <br />
+          Mr. Ludlow is a founder of Baymark Partners focused on investments in
+          service based and technology middle-market companies.
+        </Text>
+      }
+    />
+    <TeamBlock
+      src="./images/nestor-balaban.jpeg"
+      alt="Nestor Balaban Headshot"
+      imageWidth={{ base: '50%', md: '100%' }}
+      title="Nestor Balaban"
+      socials={
+        <>
+          <SocialButton
+            noBg
+            label={'LinkedIn'}
+            href={'https://www.linkedin.com/in/nbalaban1397/'}
+          >
+            <FaLinkedinIn />
+          </SocialButton>
+        </>
+      }
+      description={
+        <Text fontSize={{ base: 'sm', md: 'md' }}>
+          Mr. Balaban is a highly experienced finance and operations manager. He
+          has worked with private equity, start-ups, SMBs and Fortune 50
+          corporations in functional and senior management roles developing
+          strategy and executing tactical plans.
+          <br />
+          <br />
+          Mr. Balaban believe strongly in relationship-building, team
+          development and mentoring to achieve goals.
+        </Text>
+      }
+    />
+  </>
+);
+
 export default function Page(): JSX.Element {
   return (
     <main>
@@ -294,11 +356,20 @@ export default function Page(): JSX.Element {
         <Box paddingTop={24} paddingBottom={{ base: 10, md: 32 }}>
           <SectionTitle
             title="Our Team"
-            subtitle="We have a network of talent & advisors in Energy, Private Equity, Real Estate, Finance, Manufacturing, Distribution, Bitcoin, Software, and many more to ensure we're properly assigning risk and allocating capital."
+            subtitle="Our team is experienced in strategy & operations in Energy, Private Equity, Real Estate, Finance, Manufacturing, Distribution, Bitcoin, Software, and more."
           />
         </Box>
         <Stack gap={24}>
           <TeamBlocks />
+        </Stack>
+        <Box paddingTop={24} paddingBottom={{ base: 10, md: 32 }}>
+          <SectionTitle
+            title="Our Advisors"
+            subtitle="Our network of advisors & talent ensure we're able to properly assess risk, allocate capital, and execute over long periods of time."
+          />
+        </Box>
+        <Stack gap={24}>
+          <AdvisorBlocks />
         </Stack>
       </Container>
     </main>
