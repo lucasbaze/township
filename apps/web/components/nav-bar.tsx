@@ -300,6 +300,10 @@ const NAV_ITEMS: Array<NavItem> = [
     href: '/about-us',
   },
   {
+    label: 'Thesis',
+    href: '/thesis',
+  },
+  {
     label: 'Criteria',
     href: '/criteria',
   },
