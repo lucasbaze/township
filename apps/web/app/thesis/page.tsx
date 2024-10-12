@@ -2,8 +2,11 @@
 
 import { Container, Button, Box, Text, Link, Image } from '@chakra-ui/react';
 import { SectionTitle } from '../../components/section-title';
+import { useIsSmallScreen } from '../../lib/ui-utils/use-is-small-screen';
 
 export default function Page(): JSX.Element {
+  const isSmallScreen = useIsSmallScreen();
+
   return (
     <main>
       <Container
@@ -26,13 +29,22 @@ export default function Page(): JSX.Element {
           </Link>
         </Box>
         <Box margin="0 auto" textAlign="center">
-          <iframe
-            src="/thesis-0.3.1.pdf"
-            width="100%"
-            height="1000px"
-            style={{ border: 'none' }}
-            allow="fullscreen"
-          />
+          {isSmallScreen ? (
+            <iframe
+              src="https://drive.google.com/file/d/10-1UVnZu1mZcq-l5tcGU-aj8DQrGyVgc/preview"
+              width="100%"
+              height="480"
+              allow="autoplay"
+            ></iframe>
+          ) : (
+            <iframe
+              src="/thesis-0.3.1.pdf"
+              width="100%"
+              height="1000px"
+              style={{ border: 'none' }}
+              allow="fullscreen"
+            />
+          )}
         </Box>
       </Container>
     </main>
