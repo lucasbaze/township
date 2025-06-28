@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react';
 import { PhoneIcon, EmailIcon } from '@chakra-ui/icons';
 
-import { ContactUsForm } from '../../components/forms/contact-us-form';
+// import { ContactUsForm } from '../../components/forms/contact-us-form';
 
 const ContactBlock = ({
   name,
@@ -79,20 +79,20 @@ export default function Page(): JSX.Element {
         </Text>
         <Flex
           direction={{ base: 'column-reverse', md: 'row' }}
-          justifyContent="stretch"
+          justifyContent={{ base: 'center', md: 'center' }}
           gap={16}
           pt={12}
           maxWidth="850px"
           margin="0 auto"
         >
-          <Box flex={1}>
+          {/* <Box flex={1}>
             <ContactUsForm />
-          </Box>
-          <Box flex={1} margin="0 auto">
+          </Box> */}
+          <Box >
             <ContactBlock
               name="Township Ventures"
               phone="(713) 264-1320"
-              email="info@township.ventures"
+              email="lucas@township.ventures"
             />
           </Box>
         </Flex>

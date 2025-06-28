@@ -30,7 +30,7 @@ export default function Page(): JSX.Element {
           image2Blur="data:image/webp;base64,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"
           label="Criteria"
           title="What we look for"
-          subtitle="We look for low risk, Texas businesses with strong margins building healthy, wealthy, and wise Texans."
+          subtitle="We look for Texas businesses with talented leaders building healthy, wealthy, and wise Texans."
         />
         <Box paddingTop={24} paddingBottom={{ base: 10, md: 24 }}>
           <SectionTitle title="Business Criteria" />
@@ -69,7 +69,7 @@ export default function Page(): JSX.Element {
             iconSrc="./images/texas-flag-large.svg"
             iconWidth={{ base: '45px', md: '65px' }}
             title="Serving a Core Domain"
-            description="We focus on city infrastructure, physical health, and education."
+            description="We focus on professional services, physical health, education, and city infrastructure."
           />
         </SimpleGrid>
         <Box textAlign="center" marginY={16}>
@@ -87,12 +87,19 @@ export default function Page(): JSX.Element {
         </Box>
         <Stack gap={{ base: 20, md: 16 }}>
           <ImageBlock
-            src="/images/construction.webp"
-            alt="Construction Site"
+            src="/images/professional-services.webp"
+            alt="Professional Services"
             imageWidth={{ base: '100%', md: '280px' }}
-            title="Land & City Development"
-            description="Businesses that architect, build, and maintain the land and infrastructure for our cities."
+            title="Professional Services"
+            description="Businesses that provide professional services to other businesses."
           />
+            <ImageBlock
+              src="/images/running.webp"
+              alt="Man Running"
+              imageWidth={{ base: '100%', md: '280px' }}
+              title="Physical Health & Wellness"
+              description="Businesses that focus on the long term physical health and wellbeing of people."
+            />
           <ImageBlock
             src="/images/baylor-statue.webp"
             alt="Baylor Statue of Rufus Burleson"
@@ -101,11 +108,11 @@ export default function Page(): JSX.Element {
             description="Businesses that create opportunities to learn new skills, grow, and ultimately thrive."
           />
           <ImageBlock
-            src="/images/running.webp"
-            alt="Man Running"
+            src="/images/construction.webp"
+            alt="Construction Site"
             imageWidth={{ base: '100%', md: '280px' }}
-            title="Physical Health & Wellness"
-            description="Businesses that focus on the long term physical health and wellbeing of people."
+            title="Land & City Development"
+            description="Businesses that architect, build, and maintain the land and infrastructure for our cities."
           />
         </Stack>
       </Container>

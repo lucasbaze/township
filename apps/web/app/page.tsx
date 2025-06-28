@@ -122,8 +122,8 @@ export default function Page(): JSX.Element {
         </Box>
         <Stack gap={12} px={12}>
           <ImageBlock
-            src="/images/big-tex.webp"
-            alt="Big Tex"
+            src="/images/man-smiling-workshop.webp"
+            alt="Man Smiling Workshop"
             imageWidth={{ base: '100%', md: '280px' }}
             title="For Owners"
             description="We strive to make the buying process simple, transparent and fair to ensure a smooth transition and long term success."
@@ -134,18 +134,18 @@ export default function Page(): JSX.Element {
             src="/images/am-campus-aerial.webp"
             alt="A&M Campus"
             imageWidth={{ base: '100%', md: '280px' }}
-            title="About us"
-            description="We believe in working collaboratively to build long-term value for our businesses, communities and families."
-            buttonText="About us"
+            title="About Township"
+            description="We believe in working collaboratively to build long-term value for the businesses, communities and families we partner with."
+            buttonText="About Township"
             buttonHref="/about-us"
           />
           <ImageBlock
             src="/images/solar-ranching.webp"
             alt="Solar Ranching"
             imageWidth={{ base: '100%', md: '280px' }}
-            title="Our Criteria"
+            title="Criteria"
             description="We look for Texas businesses that are stable and will be around for a long time."
-            buttonText="Our Criteria"
+            buttonText="Criteria"
             buttonHref="/criteria"
           />
         </Stack>

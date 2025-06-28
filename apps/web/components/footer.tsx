@@ -157,7 +157,7 @@ export const Footer = () => {
             >
               <ListHeader>Company</ListHeader>
               <Link href={'/for-owners'}>For Owners</Link>
-              <Link href={'/about-us'}>About Us</Link>
+              <Link href={'/about-us'}>About</Link>
               <Link href={'/criteria'}>Criteria</Link>
             </Stack>
             <Stack

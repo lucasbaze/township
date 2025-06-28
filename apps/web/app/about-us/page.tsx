@@ -64,137 +64,18 @@ const TeamBlocks = () => (
       }
       description={
         <Text fontSize={{ base: 'sm', md: 'md' }}>
+          <b>Founder & Managing Director</b>
+          <br />
+          <br />
           My focus is working with you and your team to build a long-term
           strategic roadmap and then pounding the pavement to make it happen.
           <br />
           <br />
-          As 3x startup founder and former product manager and director of
+          As 3x startup founder, former product manager, and director of
           engineering, no business is too complex for me.
           <br />
           <br />
           Texas A&M alumni. Industrial Distribution.
-        </Text>
-      }
-    />
-    <TeamBlock
-      src="./images/cameron-headshot.webp"
-      alt="Cameron Kelley Headshot"
-      imageWidth={{ base: '50%', md: '100%' }}
-      title="Cameron Kelley"
-      socials={
-        <>
-          <SocialButton noBg label={'Home'} href={'https://www.cameronk.org/'}>
-            <FaHouse />
-          </SocialButton>
-          <SocialButton noBg label={'X'} href={'https://x.com/c3kel'}>
-            <FaXTwitter />
-          </SocialButton>
-          <SocialButton
-            noBg
-            label={'LinkedIn'}
-            href={'https://www.linkedin.com/in/cameronskelley/'}
-          >
-            <FaLinkedinIn />
-          </SocialButton>
-          <SocialButton
-            noBg
-            label={'FaGithub'}
-            href={'https://github.com/cameronk'}
-          >
-            <FaGithub />
-          </SocialButton>
-        </>
-      }
-      description={
-        <Text fontSize={{ base: 'sm', md: 'md' }}>
-          My focus is on operationalizing your strategic roadmap, finding
-          exceptional talent, and bringing cutting edge technology and
-          automation to your business.
-          <br />
-          <br />
-          As 4x startup founder and former VC operator, I’m confident we can
-          work together.
-          <br />
-          <br />
-          Texas A&M alumni. Mechanical Engineering.
-        </Text>
-      }
-    />
-    <TeamBlock
-      src="./images/roberto-headshot.jpg"
-      alt="Roberto Gargurevich Headshot"
-      imageWidth={{ base: '50%', md: '100%' }}
-      title="Roberto Gargurevich"
-      socials={
-        <>
-          <SocialButton noBg label={'X'} href={'https://x.com/gargu_R'}>
-            <FaXTwitter />
-          </SocialButton>
-          <SocialButton
-            noBg
-            label={'Nostr'}
-            href={
-              'https://primal.net/p/npub1e4s384wx4v8wq4x6kjqgsx60yfarh4vaf4nlcyud7xhljpzxlgmsn9fyx0'
-            }
-          >
-            <Image src="./images/nostr-icon.png" />
-          </SocialButton>
-          <SocialButton
-            noBg
-            label={'LinkedIn'}
-            href={'https://www.linkedin.com/in/roberto-gargurevich/'}
-          >
-            <FaLinkedinIn />
-          </SocialButton>
-        </>
-      }
-      description={
-        <Text fontSize={{ base: 'sm', md: 'md' }}>
-          My focus is on strategy, performance, and vision, and how we can
-          maneuver through moving waters to create repeatable, measurable
-          success.
-          <br />
-          <br />
-          With over 6 years in business strategy and intelligence for a
-          Berkshire Hathaway company, I’m confident we can build businesses that
-          last generations.
-          <br />
-          <br />
-          Texas A&M alumni. Industrial Engineering.
-        </Text>
-      }
-    />
-    <TeamBlock
-      src="./images/darian-headshot.webp"
-      alt="Darian Bajmanlou Headshot"
-      imageWidth={{ base: '50%', md: '100%' }}
-      title="Darian Bajmanlou"
-      socials={
-        <>
-          <SocialButton noBg label={'X'} href={'https://x.com/Bajmanlou'}>
-            <FaXTwitter />
-          </SocialButton>
-          <SocialButton
-            noBg
-            label={'Nostr'}
-            href={
-              'https://primal.net/p/npub1u87arhxu00xnh99jx5f3jkfwcv0amkeynu95vpancfyxs0k6069skk09qw'
-            }
-          >
-            <Image src="./images/nostr-icon.png" />
-          </SocialButton>
-        </>
-      }
-      description={
-        <Text fontSize={{ base: 'sm', md: 'md' }}>
-          My focus is on finding opportunities in places people aren’t looking.
-          <br />
-          <br />
-          With over 8 years in Texas real estate, I’m confident that we can
-          sustainably grow and expand your business in new ways.
-          <br />
-          <br />
-          LSU alumni. Physics & Economics.
         </Text>
       }
     />
@@ -260,6 +141,114 @@ const AdvisorBlocks = () => (
         </Text>
       }
     />
+    <TeamBlock
+      src="./images/cameron-headshot.webp"
+      alt="Cameron Kelley Headshot"
+      imageWidth={{ base: '50%', md: '100%' }}
+      title="Cameron Kelley"
+      socials={
+        <>
+          <SocialButton noBg label={'Home'} href={'https://www.cameronk.org/'}>
+            <FaHouse />
+          </SocialButton>
+          <SocialButton noBg label={'X'} href={'https://x.com/c3kel'}>
+            <FaXTwitter />
+          </SocialButton>
+          <SocialButton
+            noBg
+            label={'LinkedIn'}
+            href={'https://www.linkedin.com/in/cameronskelley/'}
+          >
+            <FaLinkedinIn />
+          </SocialButton>
+          <SocialButton
+            noBg
+            label={'FaGithub'}
+            href={'https://github.com/cameronk'}
+          >
+            <FaGithub />
+          </SocialButton>
+        </>
+      }
+      description={
+        <Text fontSize={{ base: 'sm', md: 'md' }}>
+          Mr. Kelley has founded and scaled multiple startups from the ground up. He specializes in AI and software development, operationalizing strategic roadmaps, attracting top-tier talent, and implementing cutting-edge technology and automation to drive growth.
+          <br /><br />
+          Mr. Kelley believes strongly in relationship-building, team development, and leveraging innovative solutions to achieve lasting results.
+          <br /><br />
+          Texas A&M alumnus, Mechanical Engineering.
+        </Text>
+      }
+    />
+    <TeamBlock
+      src="./images/roberto-headshot.jpg"
+      alt="Roberto Gargurevich Headshot"
+      imageWidth={{ base: '50%', md: '100%' }}
+      title="Roberto Gargurevich"
+      socials={
+        <>
+          <SocialButton noBg label={'X'} href={'https://x.com/gargu_R'}>
+            <FaXTwitter />
+          </SocialButton>
+          <SocialButton
+            noBg
+            label={'Nostr'}
+            href={
+              'https://primal.net/p/npub1e4s384wx4v8wq4x6kjqgsx60yfarh4vaf4nlcyud7xhljpzxlgmsn9fyx0'
+            }
+          >
+            <Image src="./images/nostr-icon.png" />
+          </SocialButton>
+          <SocialButton
+            noBg
+            label={'LinkedIn'}
+            href={'https://www.linkedin.com/in/roberto-gargurevich/'}
+          >
+            <FaLinkedinIn />
+          </SocialButton>
+        </>
+      }
+      description={
+        <Text fontSize={{ base: 'sm', md: 'md' }}>
+          Mr. Gargurevich has worked with large corporations, including a Berkshire Hathaway company, focusing on finance, strategy, and analytics.
+          <br /><br />
+          Mr. Gargurevich believes strongly in building resilient strategies, fostering high-performance teams, and guiding organizations to thrive for generations.
+          <br /><br />
+          Texas A&M alumnus, Industrial Engineering.
+        </Text>
+      }
+    />
+    <TeamBlock
+      src="./images/darian-headshot.webp"
+      alt="Darian Bajmanlou Headshot"
+      imageWidth={{ base: '50%', md: '100%' }}
+      title="Darian Bajmanlou"
+      socials={
+        <>
+          <SocialButton noBg label={'X'} href={'https://x.com/Bajmanlou'}>
+            <FaXTwitter />
+          </SocialButton>
+          <SocialButton
+            noBg
+            label={'Nostr'}
+            href={
+              'https://primal.net/p/npub1u87arhxu00xnh99jx5f3jkfwcv0amkeynu95vpancfyxs0k6069skk09qw'
+            }
+          >
+            <Image src="./images/nostr-icon.png" />
+          </SocialButton>
+        </>
+      }
+      description={
+        <Text fontSize={{ base: 'sm', md: 'md' }}>
+          Mr. Bajmanlou has over eight years of experience in Texas real estate, identifying overlooked opportunities and developing sustainable expansion strategies for businesses.
+          <br /><br />
+          Mr. Bajmanlou believes strongly in uncovering hidden value, building lasting relationships, and driving growth in new and creative ways.
+          <br /><br />
+          LSU alumnus, Physics & Economics.
+        </Text>
+      }
+    />
   </>
 );
 
@@ -279,9 +268,9 @@ export default function Page(): JSX.Element {
           image2="/images/texas-sign.webp"
           image2Alt="Texas Sign"
           image2Blur="data:image/webp;base64,UklGRpQDAABXRUJQVlA4WAoAAAAgAAAAagAAdwAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggpgEAAFAOAJ0BKmsAeAA+6WamTbm/uCIyVgur8B0JYy2ACnWdFxTpAHSlHU6iBMJW8G9D6d82VP0L3N9G4fI5yCpl3gMSE0VBhxlw2d59UOkoZdaiKPGjO/9tbcOJz2Pe2s5xIdxjQR+ITBDjppSZisAuOjYLYVaRlPFSHURqAAD+7UOKSEPnMP5uO1HMg7cQc9fmacCHdiwnONBPXAWD/3+AlmV63WWYiMbOM+832Ya/emgSeOP6CI+WpAdMdSGX+UMG4rwpMjbl0MeQ0Jt01CrNafGPPl78HazlTnqJs74jvBdqV9MXA4ggQ7PUuIoJNkk2r/nJhYpjDToYYpwvkKaKrIruj9ijp12B7GJfAHnHXEsTCaUES5oQQBpoxAuQvTYAH7DGt/xreMDr3UwuocA/Lfl5VBVgipd1oc+vQChJKpeL6kACM/v+fFn2d09XJI7FLvquG761YtMvS/zkDQtAkp7tdbXCk3bRL8gw5gFgdukVayUMqv8uWaj3y0ZoXJZAR1urAR9FJxAt0Oadae1pb51RCNkzduq3SLdLB/tvhfJCfdRQAAAA"
-          label="About Us"
-          title="Our Mission"
-          subtitle="Our mission is to build an ecosystem of Texas businesses that creates fulfillment, wealth, and community for generations."
+          label="About"
+          title="Mission"
+          subtitle="The mission of Township is to build an ecosystem of Texas businesses that creates fulfillment, wealth, and community for generations."
         />
         <Box paddingTop={24} paddingBottom={{ base: 10, md: 24 }}>
           <SectionTitle
@@ -355,8 +344,8 @@ export default function Page(): JSX.Element {
         </Box>
         <Box paddingTop={24} paddingBottom={{ base: 10, md: 32 }}>
           <SectionTitle
-            title="Our Team"
-            subtitle="Our team is experienced in strategy & operations in Energy, Private Equity, Real Estate, Finance, Manufacturing, Distribution, Bitcoin, Software, and more."
+            title="Team"
+            subtitle="The team at Township is experienced in strategy & operations in Energy, Private Equity, Real Estate, Finance, Manufacturing, Distribution, Bitcoin, Software, and more."
           />
         </Box>
         <Stack gap={24}>
@@ -364,8 +353,8 @@ export default function Page(): JSX.Element {
         </Stack>
         <Box paddingTop={24} paddingBottom={{ base: 10, md: 32 }}>
           <SectionTitle
-            title="Our Advisors"
-            subtitle="Our network of advisors & talent ensure we're able to properly assess risk, allocate capital, and execute over long periods of time."
+            title="Advisors"
+            subtitle="The network of advisors & talent at Township ensure we're able to properly assess risk, allocate capital, and execute over long periods of time."
           />
         </Box>
         <Stack gap={24}>

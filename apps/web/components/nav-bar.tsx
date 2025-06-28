@@ -150,7 +150,7 @@ export default function WithSubnavigation() {
                 variant="outline"
                 color="brand.primary"
               >
-                Contact Us
+                Contact
               </Button>
             </Link>
           </Stack>
@@ -233,7 +233,7 @@ const MobileNav = ({ onClose }: { onClose: () => void }) => {
             boxShadow="2px 2px 12px hsl(0deg 0% 0% / 0.2)"
             color="brand.primary"
           >
-            Contact Us
+            Contact
           </Button>
         </Link>
       </Box>
@@ -296,7 +296,7 @@ const NAV_ITEMS: Array<NavItem> = [
     href: '/for-owners',
   },
   {
-    label: 'About Us',
+    label: 'About',
     href: '/about-us',
   },
   {

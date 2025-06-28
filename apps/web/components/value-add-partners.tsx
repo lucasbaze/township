@@ -32,7 +32,7 @@ export const ValueAddPartners = () => (
           textUnderlineOffset="4px"
           display={{ base: 'none', md: 'block' }}
         >
-          About Us
+          About
         </Link>
       </Box>
       <Box flex={1}>
@@ -53,7 +53,7 @@ export const ValueAddPartners = () => (
       textUnderlineOffset="4px"
       display={{ base: 'block', md: 'none' }}
     >
-      Our Team
+      About Township
     </Link>
   </Box>
 );
